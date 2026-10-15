@@ -1,0 +1,222 @@
+{
+  "version": "V1.9 review draft",
+  "generated_at": "2026-10-15T15:39:54.027718+08:00",
+  "meaning": "file identity only; not approval or correctness; regenerate after changes",
+  "excluded": [
+    "this manifest itself",
+    "plantuml.jar rendering dependency",
+    "binary preview files and temporary outputs"
+  ],
+  "files": [
+    {
+      "path": "A-需求分析质量验证报告.md",
+      "bytes": 8888,
+      "sha256": "db86584365b99479c776dbdb98be2585519640c22b9fe88d35f8af8eebcc4899"
+    },
+    {
+      "path": "B-AI智能体使用验证报告.md",
+      "bytes": 9766,
+      "sha256": "630564fc0f36247bcb192ff092c9b1bde051bfcb889e1fb7ddfb34fdfa81e466"
+    },
+    {
+      "path": "evidence/人工确认与执行记录模板.md",
+      "bytes": 1486,
+      "sha256": "f10f36285a8540258e58dfd4e2374c01322720169066c8d1667e6493c0d9bdd1"
+    },
+    {
+      "path": "evidence/材料检查结果.json",
+      "bytes": 5034,
+      "sha256": "8a853c7c4cf5a9ba74f854edbd64c5099ef6e66b19c3b27521ce7551cf830a2f"
+    },
+    {
+      "path": "evidence/用户决定摘录.md",
+      "bytes": 1809,
+      "sha256": "6a740ee94187d0395d707fc659fd00360aee7cc6b94f94842b222c3502b02c4a"
+    },
+    {
+      "path": "evidence/课程报告要求_交换文件恢复稿.md",
+      "bytes": 4153,
+      "sha256": "8ba6295d70837ce3b4c32135d64e0a40c94fd5773cfc051c141311d9b52b5c65"
+    },
+    {
+      "path": "history/lyl_V1.1/A-需求分析质量验证报告.md",
+      "bytes": 30485,
+      "sha256": "d03de5e59f7a70dd18044e1c0af0bcc33bd7858958edf261c40b23d08920811f"
+    },
+    {
+      "path": "history/lyl_V1.1/B-AI智能体使用验证报告.md",
+      "bytes": 17166,
+      "sha256": "f731714325d1fd9fef55dcfc2ab12b6fd75d6a42c83e9b8a6961c0ef10d2031b"
+    },
+    {
+      "path": "history/lyl_V1.1/README.md",
+      "bytes": 228,
+      "sha256": "abcdebd4c0f3fbb6b758a28e723defcc1ce7a0b1f6a976c409f318e8d25f9420"
+    },
+    {
+      "path": "history/lyl_V1.1/需求规格说明书.md",
+      "bytes": 57549,
+      "sha256": "7a7c2830de78fca33edfc2456ab55ad6b638c091f885c046c3a1f0f1347df623"
+    },
+    {
+      "path": "models/AGENTS.md",
+      "bytes": 912,
+      "sha256": "b33977acf0f2c13ce31b03dda8cd156f6f7e4e4490185192fd9b3c5c096e758c"
+    },
+    {
+      "path": "models/M-01-goal-tree.puml",
+      "bytes": 2570,
+      "sha256": "6f4cba71c7d5735dcc91fe44f724790811334ced1f9c0d9c85ba96a78d613a6a"
+    },
+    {
+      "path": "models/M-01-目标树.svg",
+      "bytes": 8701,
+      "sha256": "1339a0b4905b167ba42aea8433dab7ff3cfc3a6c83197b5f4c7c8e996e77f190"
+    },
+    {
+      "path": "models/M-02-context.puml",
+      "bytes": 1485,
+      "sha256": "04ae662214846e1c2ff6b14023a00ffe89dcd63f264efb46e073a85c3a48cb69"
+    },
+    {
+      "path": "models/M-02-系统上下文图.svg",
+      "bytes": 7755,
+      "sha256": "253662a7a36ac1a1468f07d0095043385772921a7182db9086a65c98766eff0f"
+    },
+    {
+      "path": "models/M-03-usecase.puml",
+      "bytes": 2884,
+      "sha256": "a86c73c47fc32c9ff12c3a0a026065bf2778621b4603f2a0edc8d6b37782f568"
+    },
+    {
+      "path": "models/M-03-用例图.svg",
+      "bytes": 17853,
+      "sha256": "058d16163faa1f6e05dfc760fdc596cb29939ac0888bb1a9f366379d68a209ae"
+    },
+    {
+      "path": "models/M-04-activity-publish.puml",
+      "bytes": 909,
+      "sha256": "68cb126dba6abefbf2658b9e418dc9656eec88635ef44dde1b4a629233981ee8"
+    },
+    {
+      "path": "models/M-04-活动图-商品发布与审核.svg",
+      "bytes": 7431,
+      "sha256": "3e746020c3e02bf6e0ae5ceb17911039dda074b68232449cea048310d7a059f2"
+    },
+    {
+      "path": "models/M-05-activity-trade.puml",
+      "bytes": 2464,
+      "sha256": "5660a05e77427407b417ef115c03e2b9c820579f05b49f12c361b23561d3dba6"
+    },
+    {
+      "path": "models/M-05-活动图-交易流程.svg",
+      "bytes": 11126,
+      "sha256": "6b335e6e1820423cb51c375f58918fdb045c8077d450125faf668935c1002543"
+    },
+    {
+      "path": "models/M-06-activity-report.puml",
+      "bytes": 1159,
+      "sha256": "33872d46bda6e47969b9a9c4f656142342505bfe5d26284932991291f5df1748"
+    },
+    {
+      "path": "models/M-06-活动图-举报处理.svg",
+      "bytes": 6974,
+      "sha256": "10e26dbbbd1dfda1a1ada3aeab2a134b3142d5b8c2e22cf1fee15c982c6ce933"
+    },
+    {
+      "path": "models/M-07-domain-class.puml",
+      "bytes": 5464,
+      "sha256": "323626eeafccbfc3d236d56b4a9294b09674811ae38f7924e71af69d8f6b2449"
+    },
+    {
+      "path": "models/M-07-领域类图.svg",
+      "bytes": 12041,
+      "sha256": "22d1530d218f95e5d2a66d5c28f705c83277d86ece4f665116fd5d83282f2c47"
+    },
+    {
+      "path": "models/M-07A-账号与商品.svg",
+      "bytes": 9069,
+      "sha256": "b5794ab9fd695768fc0dac5b5780e8746db07acd2d30dd9ae909c8b3a9672548"
+    },
+    {
+      "path": "models/M-07B-订单与履约.svg",
+      "bytes": 10901,
+      "sha256": "be3a1db36b237ce422eb036459883507462d18820d126c969d22d6e493972fa6"
+    },
+    {
+      "path": "models/M-07C-反馈与治理.svg",
+      "bytes": 12051,
+      "sha256": "fda5bbfc975366c73bf8b7cfd75f27f8ca4c1b3672ba761fb8ec82af88c62c72"
+    },
+    {
+      "path": "models/M-08-state-product.puml",
+      "bytes": 1402,
+      "sha256": "9f2af0a7f827f267ecc95059b812d44b69510b2e9e3a90ba2788cdf158d25ad6"
+    },
+    {
+      "path": "models/M-08-状态图-商品.svg",
+      "bytes": 13101,
+      "sha256": "90e3f7a3e736e5688fcfc0206a2feab24eb3100556c724ed5aab1213a34d8867"
+    },
+    {
+      "path": "models/M-09-state-order.puml",
+      "bytes": 1904,
+      "sha256": "3bc0b767aad228446f6d631a2af3b4eb975b2f6d4f7b40044af73e30f564f173"
+    },
+    {
+      "path": "models/M-09-状态图-订单.svg",
+      "bytes": 9962,
+      "sha256": "cc259213b272c86cd757da75053cf69f7bf403864f97db6eeea00f990e2fb26d"
+    },
+    {
+      "path": "models/M-10-validation.puml",
+      "bytes": 1050,
+      "sha256": "c9b2eb3050060784de53d40c7803f7dc49f5a2c68f2a67f0d1d4d344c56976e1"
+    },
+    {
+      "path": "models/M-10-验收执行流程.svg",
+      "bytes": 10567,
+      "sha256": "fe48e2ea9f0faa1f453cc0b6496e134b35e6755df65c69173acc3b7be0758543"
+    },
+    {
+      "path": "models/README.md",
+      "bytes": 4552,
+      "sha256": "77342f357b9876c33cd6e2a0290142c1d033cd4bacddb800d6f413fd3628f302"
+    },
+    {
+      "path": "models/tools/build_svgs.py",
+      "bytes": 33604,
+      "sha256": "33642cf82363fe9da2d8c93432a01218221e285eacb99c3f5d61bbe73854dbd1"
+    },
+    {
+      "path": "models/图册.html",
+      "bytes": 5844,
+      "sha256": "9a9ec25c9bbf1425f1821402049435bd0b99ac18d94eb05e2b8cbf8289ce25f5"
+    },
+    {
+      "path": "models/图示检查记录.json",
+      "bytes": 2303,
+      "sha256": "b9bb6ddcdf4e5d600cea1a9f243588ba6ef9732ed16f5c3cc4f6f87046a5f008"
+    },
+    {
+      "path": "tools/check_materials.py",
+      "bytes": 5795,
+      "sha256": "280909933b2dec0543125d1ec3c355ab5112ed9d8bd06cc32dcd9c4eb57d1baf"
+    },
+    {
+      "path": "需求规格说明书.md",
+      "bytes": 100079,
+      "sha256": "22ea90c10a11cf322637982ad0c05632d20903668b465b42b1dc4235e48657c7"
+    },
+    {
+      "path": "验收场景清单.md",
+      "bytes": 18719,
+      "sha256": "c387785a6507d82edec38f231f2b51e621f4407174417dcac6cc68ba9dbafb19"
+    },
+    {
+      "path": "../../校园二手交易与物品流转平台.zip",
+      "bytes": 20765299,
+      "sha256": "4c66dcc841a022cc5feb40eb87782b86db427f849d36b80101d1344b7857a6de"
+    }
+  ]
+}

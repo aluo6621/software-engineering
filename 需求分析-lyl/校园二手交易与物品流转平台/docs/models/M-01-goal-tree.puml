@@ -1,0 +1,54 @@
+@startuml M-01-目标树
+!theme plain
+skinparam defaultFontName "PingFang SC"
+skinparam wrapWidth 200
+
+title M-01 目标树 — 校园二手交易与物品流转平台\n关联：G-1 ~ G-5（业务目标，见需求规格说明书 1.2 节）
+
+rectangle "G-0 建设校园二手交易与物品流转平台\n总体业务目标" as G0 #DCE9F7
+
+rectangle "G-1 提供安全、可信的\n校园内部交易环境" as G1 #E8F0E4
+rectangle "G-2 提升闲置物品的\n发布与流转效率" as G2 #E8F0E4
+rectangle "G-3 让交易过程全程\n可追踪、可追溯" as G3 #E8F0E4
+rectangle "G-4 形成正向激励的\n校园交易社区" as G4 #E8F0E4
+rectangle "G-5 支撑平台运营与\n管理决策" as G5 #E8F0E4
+
+rectangle "G-1.1 校园身份认证后\n方可发布商品与下单\n（成功指标：未认证发布与下单\n被拒绝）" as G11 #F5F5F0
+rectangle "G-1.2 违规商品与违规用户\n可被举报、审核与处置\n（成功指标：举报处理结论\n与理由可查）" as G12 #F5F5F0
+
+rectangle "G-2.1 发布到上架流程线上化\n（成功指标：审核通过可展示，\n驳回理由可查）" as G21 #F5F5F0
+rectangle "G-2.2 支持出售、免费转让、\n以物易物三类流转方式\n（成功指标：三类方式均可\n完成一次完整交易）" as G22 #F5F5F0
+
+rectangle "G-3.1 商品状态全程可追踪\n（成功指标：商品状态符合\n统一后的状态规则）" as G31 #F5F5F0
+rectangle "G-3.2 订单状态全程可追踪\n（成功指标：订单状态符合\n统一后的状态规则）" as G32 #F5F5F0
+rectangle "G-3.3 线下交付有记录、\n双方确认（成功指标：已完成\n订单均有交付记录）" as G33 #F5F5F0
+
+rectangle "G-4.1 交易双方可互评，\n评价公开可见\n（成功指标：订单参与者可按\n规则评价）" as G41 #F5F5F0
+rectangle "G-4.2 违规处置结果\n记录可查（成功指标：\n处置记录 100% 可追溯\n到具体管理员）" as G42 #F5F5F0
+
+rectangle "G-5.1 提供商品、订单、用户\n维度数据统计\n（成功指标：统计与样例明细\n按统一口径核对一致）" as G51 #F5F5F0
+
+G0 -down-> G1
+G0 -down-> G2
+G0 -down-> G3
+G0 -down-> G4
+G0 -down-> G5
+G1 -down-> G11
+G1 -down-> G12
+G2 -down-> G21
+G2 -down-> G22
+G3 -down-> G31
+G3 -down-> G32
+G3 -down-> G33
+G4 -down-> G41
+G4 -down-> G42
+G5 -down-> G51
+
+note right of G0
+  业务类型与取消平台支付已由用户明确。
+  验收观察项为分析建议，尚未执行验证。
+  交换细则与状态模型仍待完善。
+  关联规则编号见 BR-01 ~ BR-20。
+end note
+
+@enduml

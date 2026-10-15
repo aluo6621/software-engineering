@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1120" viewBox="0 0 1440 1120" role="img" aria-labelledby="title desc"><title id="title">M-06 举报核实与关联处置</title><desc id="desc">举报结果与订单结果分别保存；提交举报本身不自动暂停交易。V1.9 优化稿，规则待小组复核，非执行验证结果。</desc><defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="#60778F"/></marker></defs>
+<rect x="0" y="0" width="1440" height="1120" rx="0" fill="#F6F8FC" stroke="#CED9E5"/>
+<text x="42" y="47" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" fill="#142D4E" font-weight="600" text-anchor="start">M-06 举报核实与关联处置</text>
+<text x="42" y="79" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">举报结果与订单结果分别保存；提交举报本身不自动暂停交易</text>
+<path d="M42,100 L1398,100" fill="none" stroke="#CED9E5" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="410" y="135" width="620" height="100" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="426" y="164" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">提交举报并校验</text>
+<text x="426" y="191" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">正常或限制状态的已登录用户，含未认证；对象须有权访问</text>
+<rect x="410" y="295" width="620" height="100" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="426" y="324" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">保存原始举报 → 待处理</text>
+<text x="426" y="351" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">保留举报人、证据与关联订单；分组不扩大访问范围</text>
+<rect x="410" y="455" width="620" height="100" rx="12" fill="#F2ECFA" stroke="#CED9E5"/>
+<text x="426" y="484" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">管理员受理并核实</text>
+<text x="426" y="511" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">记录依据；根据对象和实际阶段选择处置，不强制同时封禁与下架</text>
+<rect x="60" y="640" width="470" height="110" rx="12" fill="#FFF4DD" stroke="#CED9E5"/>
+<text x="76" y="669" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">不成立</text>
+<text x="76" y="696" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">写明理由与处理结论</text>
+<text x="76" y="720" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">仅向举报人展示与其相关的结果</text>
+<rect x="790" y="640" width="590" height="110" rx="12" fill="#FCEDEA" stroke="#CED9E5"/>
+<text x="806" y="669" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">成立：执行有依据的账号 / 商品处置</text>
+<text x="806" y="696" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">在售或已预订商品可违规下架</text>
+<text x="806" y="720" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">涉及进行中订单须同时暂停 ST-O08</text>
+<rect x="790" y="815" width="590" height="150" rx="12" fill="#F2ECFA" stroke="#CED9E5"/>
+<text x="806" y="844" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">异常订单单独处理 UC-25</text>
+<text x="806" y="871" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">原因消除且满足条件 → 原阶段恢复 ST-O09</text>
+<text x="806" y="895" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">依据充分、遗留事项解决 → 已关闭 ST-O10</text>
+<text x="806" y="919" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">未解决继续暂停；不代双方完成</text>
+<path d="M720.0,235 L720.0,295" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M720.0,395 L720.0,455" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M600,555 L600,595 L295,595 L295,640" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="320" y="582" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">不成立</text>
+<path d="M830,555 L830,595 L1085,595 L1085,640" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1100" y="582" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">成立</text>
+<path d="M1085.0,750 L1085.0,815" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1093.0" y="775.5" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">存在关联进行中订单</text>
+<rect x="60" y="995" width="1320" height="65" rx="16" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="80" y="1027" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" fill="#142D4E" font-weight="600" text-anchor="start">所有处置留痕；举报已处理 ≠ 订单已完成；举报人身份与其他投诉证据不对被举报方公开。</text>
+<text x="42" y="1102" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">V1.9 · 分模块优化稿 · 细则待小组复核；图示不代表已实现或测试通过</text>
+</svg>

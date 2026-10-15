@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1060" viewBox="0 0 1440 1060" role="img" aria-labelledby="title desc"><title id="title">M-04 商品发布与审核</title><desc id="desc">主线向下；校验失败回草稿；驳回后修改重提，或放弃下架。V1.9 优化稿，规则待小组复核，非执行验证结果。</desc><defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="#60778F"/></marker></defs>
+<rect x="0" y="0" width="1440" height="1060" rx="0" fill="#F6F8FC" stroke="#CED9E5"/>
+<text x="42" y="47" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" fill="#142D4E" font-weight="600" text-anchor="start">M-04 商品发布与审核</text>
+<text x="42" y="79" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">主线向下；校验失败回草稿；驳回后修改重提，或放弃下架</text>
+<path d="M42,100 L1398,100" fill="none" stroke="#CED9E5" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="40" y="125" width="890" height="840" rx="16" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="60" y="157" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" fill="#142D4E" font-weight="600" text-anchor="start">发布方与系统</text>
+<rect x="970" y="125" width="430" height="840" rx="16" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="990" y="157" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" fill="#142D4E" font-weight="600" text-anchor="start">管理员审核</text>
+<rect x="240" y="195" width="480" height="105" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="256" y="224" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">填写并保存草稿</text>
+<text x="256" y="251" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">物品、方式、图片；出售正价 / 赠送零价 / 交换条件</text>
+<rect x="240" y="355" width="480" height="95" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="256" y="384" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">校验必填与权限</text>
+<text x="256" y="411" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">失败保留原稿，不生成有效审核请求</text>
+<rect x="240" y="505" width="480" height="95" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="256" y="534" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">提交当前版本</text>
+<text x="256" y="561" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">待审核 · ST-P01；驳回重提 ST-P04</text>
+<rect x="1010" y="505" width="350" height="120" rx="12" fill="#F2ECFA" stroke="#CED9E5"/>
+<text x="1026" y="534" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">查看并审查当前版本</text>
+<text x="1026" y="561" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">通过或驳回均留痕</text>
+<text x="1026" y="585" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">不以审核声明已证明实物真实</text>
+<rect x="1010" y="710" width="350" height="95" rx="12" fill="#E9F6EF" stroke="#CED9E5"/>
+<text x="1026" y="739" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">通过 → 在售</text>
+<text x="1026" y="766" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">ST-P02；可公开、收藏、下单</text>
+<rect x="240" y="710" width="480" height="95" rx="12" fill="#FFF4DD" stroke="#CED9E5"/>
+<text x="256" y="739" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">驳回 → 审核驳回</text>
+<text x="256" y="766" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">ST-P03；卖家查看理由、修改重提</text>
+<path d="M480.0,300 L480.0,355" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M480.0,450 L480.0,505" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="488.0" y="470.5" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">有效</text>
+<path d="M720,552.5 L1010,565.0" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1185.0,625 L1185.0,710" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1193.0" y="660.5" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">通过</text>
+<path d="M1010,590 L925,590 L925,757 L720,757" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="935" y="680" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">驳回</text>
+<path d="M240,755 L125,755 L125,552 L240,552" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="62" y="650" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">修改重提</text>
+<path d="M240,400 L170,400 L170,247 L240,247" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="70" y="330" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">校验失败</text>
+<text x="260" y="860" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#142D4E" font-weight="400" text-anchor="start">暂不提交：保留草稿；放弃修改：已下架（ST-P08）。</text>
+<text x="260" y="892" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#142D4E" font-weight="400" text-anchor="start">已下架重提及公开商品关键编辑均需再审核。</text>
+<text x="42" y="1042" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">V1.9 · 分模块优化稿 · 细则待小组复核；图示不代表已实现或测试通过</text>
+</svg>

@@ -1,0 +1,30 @@
+@startuml M-04-活动图-商品发布与审核
+!theme plain
+skinparam defaultFontName "PingFang SC"
+title M-04 发布与审核流程 / UC-05、UC-06、UC-18
+start
+:本人填写并保存草稿;
+while (提交资料有效且本人有发布资格？) is (否)
+  :提示字段原因，保留原稿并修改;
+endwhile (是)
+if (暂不提交？) then (是)
+  :保留草稿;
+  stop
+endif
+:提交当前版本，待审核 ST-P01;
+while (管理员审核通过？) is (否)
+  :审核驳回 ST-P03，记录理由;
+  if (本人放弃修改？) then (是)
+    :已下架 ST-P08;
+    stop
+  endif
+  :本人修改并通过校验，重提 ST-P04;
+endwhile (是)
+:在售 ST-P02；记录审核依据，公开商品;
+stop
+note right
+已下架重提及公开商品关键编辑须重新审核。
+重复或过期版本不得覆盖既有审核结果。
+通知为候选增强，审核结果可由本人列表查看。
+end note
+@enduml

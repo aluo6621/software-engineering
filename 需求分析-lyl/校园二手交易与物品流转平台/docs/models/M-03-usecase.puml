@@ -1,0 +1,102 @@
+@startuml M-03-用例图
+!theme plain
+skinparam defaultFontName "PingFang SC"
+skinparam wrapWidth 220
+left to right direction
+
+title M-03 用例图 — 校园二手交易与物品流转平台\n用例描述与需求规格说明书第 2 章及 4.3 节；含 UC-24 校园认证审核、UC-25 异常订单处理
+
+actor "访客" as Visitor #D9D9D9
+actor "注册用户\n（未认证也可收藏、举报）" as User #BBD7EA
+actor "已认证用户" as Verified #CDE8CC
+Verified --|> User
+actor "管理员" as Admin #F6C6EA
+
+rectangle "校园二手交易与物品流转平台" {
+
+  rectangle "账号与认证" {
+    usecase "UC-01 注册账号" as UC01
+    usecase "UC-02 登录 / 退出" as UC02
+    usecase "UC-03 提交校园认证" as UC03
+    usecase "UC-04 维护个人资料" as UC04
+    usecase "UC-24 审核校园认证" as UC24
+    usecase "UC-25 处理异常订单\n（暂停 / 恢复 / 终止）" as UC25
+  }
+
+  rectangle "商品管理" {
+    usecase "UC-05 发布商品" as UC05
+    usecase "UC-06 管理我的商品\n（编辑 / 下架 / 重新上架）" as UC06
+    usecase "UC-07 浏览与搜索商品" as UC07
+    usecase "UC-08 查看商品详情" as UC08
+    usecase "UC-09 收藏商品" as UC09
+  }
+
+  rectangle "交易沟通" {
+    usecase "UC-10 发起商品咨询" as UC10
+    usecase "UC-11 买家下单" as UC11
+    usecase "UC-12 卖家确认订单" as UC12
+    usecase "UC-13 取消订单" as UC13
+    usecase "UC-14 记录线下交付" as UC14
+    usecase "UC-15 双方确认收货完成" as UC15
+  }
+
+  rectangle "评价与举报" {
+    usecase "UC-16 评价交易对象" as UC16
+    usecase "UC-17 举报商品 / 用户" as UC17
+  }
+
+  rectangle "平台管理" {
+    usecase "UC-18 审核商品" as UC18
+    usecase "UC-19 处理举报" as UC19
+    usecase "UC-20 封禁 / 解禁用户" as UC20
+    usecase "UC-21 下架违规商品" as UC21
+    usecase "UC-22 查看数据统计" as UC22
+    usecase "UC-23 状态变更通知\n（候选扩展）" as UC23
+  }
+}
+
+Visitor --> UC01
+Visitor --> UC07
+Visitor --> UC08
+
+User --> UC02
+User --> UC03
+User --> UC04
+Verified --> UC05
+Verified --> UC06
+User --> UC07
+User --> UC08
+User --> UC09
+Verified --> UC10
+Verified --> UC11
+Verified --> UC12
+Verified --> UC13
+Verified --> UC14
+Verified --> UC15
+Verified --> UC16
+User --> UC17
+
+Admin --> UC18
+Admin --> UC19
+Admin --> UC20
+Admin --> UC21
+Admin --> UC22
+Admin --> UC24
+Admin --> UC25
+Admin --> UC02
+User <-- UC23 : 接收候选通知
+
+note right of Verified
+  发布、咨询、下单以认证通过为前置条件。
+  订单操作另检查买卖方、阶段和账号状态。
+  管理员不能代替双方确认完成。
+  生命周期先后关系不使用 extend 表示。
+end note
+
+note bottom of Visitor
+  访客仅可浏览公开内容与注册；
+  登录后成为注册用户，同一用户可
+  同时具有买家与卖家两种身份。
+end note
+
+@enduml

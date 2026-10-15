@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1640" height="1170" viewBox="0 0 1640 1170" role="img" aria-labelledby="title desc"><title id="title">M-09 订单生命周期与暂停处理</title><desc id="desc">生命周期与处理状态分别记录；下方独立区域说明暂停 / 恢复 / 终止。V1.9 优化稿，规则待小组复核，非执行验证结果。</desc><defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="#60778F"/></marker></defs>
+<rect x="0" y="0" width="1640" height="1170" rx="0" fill="#F6F8FC" stroke="#CED9E5"/>
+<text x="42" y="47" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" fill="#142D4E" font-weight="600" text-anchor="start">M-09 订单生命周期与暂停处理</text>
+<text x="42" y="79" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">生命周期与处理状态分别记录；下方独立区域说明暂停 / 恢复 / 终止</text>
+<path d="M42,100 L1598,100" fill="none" stroke="#CED9E5" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="50" y="170" width="330" height="105" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="66" y="199" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">待确认</text>
+<text x="66" y="226" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">下单 ST-O01</text>
+<rect x="450" y="170" width="330" height="105" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="466" y="199" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">待交付</text>
+<text x="466" y="226" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">卖家接受 ST-O02</text>
+<rect x="850" y="170" width="330" height="105" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="866" y="199" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">待双方确认</text>
+<text x="866" y="226" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">卖家记录交付 ST-O05</text>
+<rect x="1250" y="170" width="330" height="105" rx="12" fill="#E9F6EF" stroke="#CED9E5"/>
+<text x="1266" y="199" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">已完成</text>
+<text x="1266" y="226" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">双方确认 ST-O07</text>
+<path d="M380,222.5 L450,222.5" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M780,222.5 L850,222.5" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1180,222.5 L1250,222.5" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="415" y="154" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="middle">截止前接单</text>
+<text x="815" y="154" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="middle">实际交付</text>
+<text x="1215" y="154" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="middle">双方确认</text>
+<rect x="250" y="430" width="330" height="100" rx="12" fill="#FFF4DD" stroke="#CED9E5"/>
+<text x="266" y="459" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">已取消</text>
+<text x="266" y="486" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">买家 ST-O03 / 卖家 ST-O06</text>
+<rect x="750" y="430" width="330" height="100" rx="12" fill="#FCEDEA" stroke="#CED9E5"/>
+<text x="766" y="459" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">已关闭</text>
+<text x="766" y="486" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">拒绝 / 超时 ST-O04；异常终止 O10</text>
+<path d="M130,275 L130,375 L330,375 L330,430" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="145" y="340" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">买家取消 O03</text>
+<path d="M540,275 L540,430" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="555" y="355" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">卖家未实际交付时取消 O06</text>
+<path d="M235,275 L235,320 L915,320 L915,430" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="655" y="307" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">拒绝 / 达到确认截止 O04</text>
+<rect x="50" y="610" width="1530" height="320" rx="16" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="70" y="642" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" fill="#142D4E" font-weight="600" text-anchor="start">独立处理状态：仅作用于进行中订单</text>
+<rect x="100" y="700" width="390" height="115" rx="12" fill="#E9F6EF" stroke="#CED9E5"/>
+<text x="116" y="729" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">正常</text>
+<text x="116" y="756" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">允许符合权限及阶段的操作</text>
+<rect x="690" y="700" width="390" height="115" rx="12" fill="#F2ECFA" stroke="#CED9E5"/>
+<text x="706" y="729" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">暂停</text>
+<text x="706" y="756" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">原生命周期不变，保留锁定和确认</text>
+<text x="706" y="780" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">禁止普通推进、取消和超时关闭</text>
+<path d="M490,730 L690,730" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="505" y="714" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">管理员核实后 O08</text>
+<path d="M690,790 L490,790" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="492" y="847" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">原因消除且满足条件 O09</text>
+<text x="1130" y="728" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">O10 有证据终止 → 已关闭</text>
+<text x="1130" y="756" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">不代双方确认，不改已完成</text>
+<text x="1130" y="784" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">线下遗留争议未解决则继续暂停</text>
+<text x="1130" y="812" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">恢复待确认需记录新旧截止</text>
+<rect x="50" y="975" width="1530" height="120" rx="16" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="70" y="1007" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" fill="#142D4E" font-weight="600" text-anchor="start">统一守卫条件与关联结果</text>
+<text x="70" y="1033" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#53677F" font-weight="400" text-anchor="start">普通生命周期转换仅在处理状态正常时执行；第三人、管理员均不能代双方确认。</text>
+<text x="70" y="1061" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#53677F" font-weight="400" text-anchor="start">取消 / 关闭只释放目标商品；完成同步订单与目标，提供快照留存；一方确认或重复请求不提前完成。</text>
+<text x="42" y="1152" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">V1.9 · 分模块优化稿 · 细则待小组复核；图示不代表已实现或测试通过</text>
+</svg>

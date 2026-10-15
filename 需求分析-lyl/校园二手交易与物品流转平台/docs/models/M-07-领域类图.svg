@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="1130" viewBox="0 0 1560 1130" role="img" aria-labelledby="title desc"><title id="title">M-07 领域模型 · 核心交易关系</title><desc id="desc">只展示核心对象与数量关系；完整字段及支撑对象分见 M-07A / B / C，合计 15 个对象。V1.9 优化稿，规则待小组复核，非执行验证结果。</desc><defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="#60778F"/></marker></defs>
+<rect x="0" y="0" width="1560" height="1130" rx="0" fill="#F6F8FC" stroke="#CED9E5"/>
+<text x="42" y="47" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" fill="#142D4E" font-weight="600" text-anchor="start">M-07 领域模型 · 核心交易关系</text>
+<text x="42" y="79" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">只展示核心对象与数量关系；完整字段及支撑对象分见 M-07A / B / C，合计 15 个对象</text>
+<path d="M42,100 L1518,100" fill="none" stroke="#CED9E5" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="50" y="160" width="350" height="117" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="66" y="189" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">User 用户</text>
+<text x="66" y="216" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">账号角色 / 账号状态</text>
+<text x="66" y="240" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">认证资格与账号状态分别判断</text>
+<rect x="600" y="160" width="390" height="142" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="616" y="189" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">Order 订单</text>
+<text x="616" y="216" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">买家 / 卖家 / 方式 / 金额 / 差价</text>
+<text x="616" y="240" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">生命周期 / 正常或暂停</text>
+<text x="616" y="264" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">确认截止 / 结束原因</text>
+<rect x="1190" y="160" width="320" height="117" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1206" y="189" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">OrderEvent 事件</text>
+<text x="1206" y="216" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">请求标识 / 执行者 / 时间</text>
+<text x="1206" y="240" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">前后状态 / 处置引用</text>
+<path d="M400,218.5 L600,231.0" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="408" y="209.5" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">1</text>
+<text x="592" y="222.0" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="end">0..*</text>
+<text x="500.0" y="246.75" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="middle">买家 / 卖家（不同用户）</text>
+<path d="M990,231.0 L1190,218.5" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="998" y="222.0" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">1</text>
+<text x="1182" y="209.5" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="end">1..*</text>
+<text x="1090.0" y="246.75" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="middle">追加历史</text>
+<rect x="600" y="475" width="390" height="117" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="616" y="504" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">OrderItem 订单物品项</text>
+<text x="616" y="531" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">目标关联商品；提供项仅私有资料</text>
+<text x="616" y="555" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">交出与接收方向 / 不可覆盖快照</text>
+<rect x="50" y="475" width="350" height="117" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="66" y="504" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">Product 商品</text>
+<text x="66" y="531" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">发布者 / 方式 / 价格 / 状态</text>
+<text x="66" y="555" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">内容版本 / 交换期望</text>
+<path d="M795.0,302 L795.0,475" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="804.0" y="322" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">1</text>
+<text x="804.0" y="465" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">1..2</text>
+<text x="815.0" y="388.5" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">订单内物品</text>
+<path d="M400,533.5 L600,533.5" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="408" y="524.5" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">0..1</text>
+<text x="592" y="524.5" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="end">0..*</text>
+<text x="500.0" y="555.5" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="middle">仅目标项关联；提供项为空</text>
+<rect x="600" y="790" width="390" height="117" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="616" y="819" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">DeliveryRecord 交付记录</text>
+<text x="616" y="846" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">实际交付与记录时间 / 地点</text>
+<text x="616" y="870" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">逐件说明；不代替双方确认</text>
+<path d="M990,275 L1130,275 L1130,735 L795,735 L795,790" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="1000" y="263" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">1</text>
+<text x="807" y="776" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">0..1</text>
+<text x="1140" y="635" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">有效交付记录</text>
+<rect x="1190" y="790" width="320" height="117" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1206" y="819" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">DeliveryConfirmation 确认</text>
+<text x="1206" y="846" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">订单 / 本人 / 首次确认时间</text>
+<text x="1206" y="870" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">同单同人最多一条</text>
+<path d="M990,295 L1160,295 L1160,700 L1350,700 L1350,790" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="1000" y="313" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">1</text>
+<text x="1360" y="776" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">0..2</text>
+<text x="1190" y="690" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">本人确认</text>
+<rect x="50" y="760" width="350" height="220" rx="16" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="70" y="792" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" fill="#142D4E" font-weight="600" text-anchor="start">核心约束</text>
+<text x="68" y="824" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">订单 → 交付记录：1 对 0..1</text>
+<text x="68" y="851" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">订单 → 本人确认：1 对 0..2</text>
+<text x="68" y="878" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">出售 / 赠送恰好 1 个物品项</text>
+<text x="68" y="905" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">交换 2 项，提供项不预发布</text>
+<text x="68" y="932" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">暂停仍占用目标，不自动释放</text>
+<rect x="50" y="1015" width="1460" height="65" rx="16" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="70" y="1047" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" fill="#142D4E" font-weight="600" text-anchor="start">详细模型：M-07A 账号与商品 · M-07B 订单与履约 · M-07C 反馈与治理；数量标注见各关系端点。</text>
+<text x="42" y="1112" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">V1.9 · 分模块优化稿 · 细则待小组复核；图示不代表已实现或测试通过</text>
+</svg>

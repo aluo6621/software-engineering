@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="1260" viewBox="0 0 1680 1260" role="img" aria-labelledby="title desc"><title id="title">M-07B 领域模型 · 订单、交付与历史</title><desc id="desc">M-07 分图 2/3 · 关联线表示业务归属，不授权级联删除证据。V1.9 优化稿，规则待小组复核，非执行验证结果。</desc><defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="#60778F"/></marker></defs>
+<rect x="0" y="0" width="1680" height="1260" rx="0" fill="#F6F8FC" stroke="#CED9E5"/>
+<text x="42" y="47" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" fill="#142D4E" font-weight="600" text-anchor="start">M-07B 领域模型 · 订单、交付与历史</text>
+<text x="42" y="79" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">M-07 分图 2/3 · 关联线表示业务归属，不授权级联删除证据</text>
+<path d="M42,100 L1638,100" fill="none" stroke="#CED9E5" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="590" y="135" width="500" height="192" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="606" y="164" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">Order 订单</text>
+<text x="606" y="191" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">orderId / buyerId ≠ sellerId</text>
+<text x="606" y="215" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">tradeType / agreedAmount / currency / 差价与方向</text>
+<text x="606" y="239" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">lifecycleStatus / handlingStatus</text>
+<text x="606" y="263" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">confirmationDeadline / creationRequestKey</text>
+<text x="606" y="287" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">创建 / 接受 / 完成 / 结束时间与原因</text>
+<rect x="40" y="520" width="470" height="167" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="56" y="549" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">OrderItem 物品项 + 快照</text>
+<text x="56" y="576" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">orderId / productId（提供项为空）</text>
+<text x="56" y="600" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">itemRole / 交出与接收方 / 目标版本</text>
+<text x="56" y="624" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">标题 / 描述 / 分类 / 成色 / 图片快照</text>
+<text x="56" y="648" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">方式 / 价格 / 交换期望快照</text>
+<rect x="605" y="520" width="470" height="142" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="621" y="549" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">DeliveryRecord 交付记录</text>
+<text x="621" y="576" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">orderId / recordedBy</text>
+<text x="621" y="600" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">occurredAt / recordedAt / location</text>
+<text x="621" y="624" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">itemHandoverNotes（全部物品项）</text>
+<rect x="1170" y="520" width="470" height="142" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1186" y="549" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">DeliveryConfirmation 本人确认</text>
+<text x="1186" y="576" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">orderId / userId / confirmedAt</text>
+<text x="1186" y="600" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">只允许买家或卖家本人</text>
+<text x="1186" y="624" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">同一订单同一人最多一条</text>
+<path d="M750,327 L750,430 L275.0,430 L275.0,520" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="759" y="350" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">1</text>
+<text x="284.0" y="506" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">1..2</text>
+<path d="M840,327 L840,455 L840.0,455 L840.0,520" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="849" y="350" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">1</text>
+<text x="849.0" y="506" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">0..1</text>
+<path d="M930,327 L930,480 L1405.0,480 L1405.0,520" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="939" y="350" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">1</text>
+<text x="1414.0" y="506" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">0..2</text>
+<rect x="605" y="870" width="470" height="167" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="621" y="899" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">OrderEvent 追加事件</text>
+<text x="621" y="926" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">orderId / actionType / actor / time</text>
+<text x="621" y="950" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">requestKey / 前后生命周期与处理状态</text>
+<text x="621" y="974" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">reason / adminActionId（可选）</text>
+<text x="621" y="998" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">deadlineBefore / deadlineAfter</text>
+<path d="M1090,245 L1120,245 L1120,810 L840,810 L840,870" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="1100" y="232" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">1</text>
+<text x="852" y="855" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">1..*</text>
+<rect x="40" y="870" width="470" height="200" rx="16" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="60" y="902" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" fill="#142D4E" font-weight="600" text-anchor="start">物品项约束</text>
+<text x="58" y="932" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">出售 / 赠送：1 个目标项</text>
+<text x="58" y="959" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">交换：目标项 + 本人提供项，共 2 项</text>
+<text x="58" y="986" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">提供者直接填物品资料，不先发布审核</text>
+<text x="58" y="1013" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">仅已发布目标有唯一占用，不识别实物重复描述</text>
+<rect x="1170" y="870" width="470" height="200" rx="16" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="1190" y="902" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" fill="#142D4E" font-weight="600" text-anchor="start">确认与历史约束</text>
+<text x="1188" y="932" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">创建、快照、锁定与事件整体生效</text>
+<text x="1188" y="959" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">交付记录不自动产生本人确认</text>
+<text x="1188" y="986" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">暂停保留目标锁定、原阶段与确认</text>
+<text x="1188" y="1013" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">恢复时记录新旧截止；历史不覆盖</text>
+<text x="42" y="1242" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">V1.9 · 分模块优化稿 · 细则待小组复核；图示不代表已实现或测试通过</text>
+</svg>

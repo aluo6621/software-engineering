@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1640" height="1250" viewBox="0 0 1640 1250" role="img" aria-labelledby="title desc"><title id="title">M-08 商品状态 · 主线与补充分支</title><desc id="desc">主线从左向右；下方逐项列出回退、下架和重新审核规则，避免回路交叉。V1.9 优化稿，规则待小组复核，非执行验证结果。</desc><defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="#60778F"/></marker></defs>
+<rect x="0" y="0" width="1640" height="1250" rx="0" fill="#F6F8FC" stroke="#CED9E5"/>
+<text x="42" y="47" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" fill="#142D4E" font-weight="600" text-anchor="start">M-08 商品状态 · 主线与补充分支</text>
+<text x="42" y="79" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">主线从左向右；下方逐项列出回退、下架和重新审核规则，避免回路交叉</text>
+<path d="M42,100 L1598,100" fill="none" stroke="#CED9E5" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="40" y="180" width="280" height="105" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="56" y="209" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">草稿</text>
+<text x="56" y="236" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">可保存，未提交不公开</text>
+<rect x="355" y="180" width="280" height="105" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="371" y="209" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">待审核</text>
+<text x="371" y="236" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">管理员审查当前版本</text>
+<rect x="670" y="180" width="280" height="105" rx="12" fill="#E9F6EF" stroke="#CED9E5"/>
+<text x="686" y="209" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">在售</text>
+<text x="686" y="236" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">可搜索与下单</text>
+<rect x="985" y="180" width="280" height="105" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1001" y="209" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">已预订</text>
+<text x="1001" y="236" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">进行中订单占用，含暂停</text>
+<rect x="1300" y="180" width="280" height="105" rx="12" fill="#E9F6EF" stroke="#CED9E5"/>
+<text x="1316" y="209" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">已成交</text>
+<text x="1316" y="236" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">订单完成，历史留存</text>
+<path d="M320,232.5 L355,232.5" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="337" y="164" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="middle">P01</text>
+<path d="M635,232.5 L670,232.5" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="652" y="164" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="middle">P02</text>
+<path d="M950,232.5 L985,232.5" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="967" y="164" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="middle">P05</text>
+<path d="M1265,232.5 L1300,232.5" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1282" y="164" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="middle">P07</text>
+<rect x="40" y="325" width="1560" height="70" rx="16" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="60" y="357" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" fill="#142D4E" font-weight="600" text-anchor="start">主线语义：提交审核 → 审核通过 → 下单成功即锁定 → 双方确认后共同完成。</text>
+<rect x="60" y="445" width="460" height="115" rx="12" fill="#FFF4DD" stroke="#CED9E5"/>
+<text x="76" y="474" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">审核驳回</text>
+<text x="76" y="501" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">不公开；可按理由修改后重新提交</text>
+<text x="76" y="525" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">也可放弃修改，转为已下架</text>
+<rect x="590" y="445" width="460" height="115" rx="12" fill="#FFF4DD" stroke="#CED9E5"/>
+<text x="606" y="474" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">已下架</text>
+<text x="606" y="501" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">可编辑后重新提交审核</text>
+<text x="606" y="525" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">不直接恢复公开，不是终态</text>
+<rect x="1120" y="445" width="460" height="115" rx="12" fill="#FCEDEA" stroke="#CED9E5"/>
+<text x="1136" y="474" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">违规下架</text>
+<text x="1136" y="501" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">终态，不可重新上架</text>
+<text x="1136" y="525" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">涉及预订物品时，关联订单同时暂停</text>
+<rect x="40" y="610" width="1560" height="460" rx="16" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="60" y="642" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" fill="#142D4E" font-weight="600" text-anchor="start">补充分支与转换编号（完整定义见正文 5.4 节）</text>
+<text x="65" y="700" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#142D4E" font-weight="600" text-anchor="start">ST-P03</text>
+<text x="215" y="700" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#142D4E" font-weight="400" text-anchor="start">待审核 → 审核驳回</text>
+<text x="700" y="700" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">管理员驳回，必须说明理由</text>
+<path d="M65,716 L1570,716" fill="none" stroke="#CED9E5" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="65" y="748" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#142D4E" font-weight="600" text-anchor="start">ST-P04</text>
+<text x="215" y="748" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#142D4E" font-weight="400" text-anchor="start">审核驳回 → 待审核</text>
+<text x="700" y="748" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">本人按理由修订并重新校验</text>
+<path d="M65,764 L1570,764" fill="none" stroke="#CED9E5" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="65" y="796" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#142D4E" font-weight="600" text-anchor="start">ST-P06</text>
+<text x="215" y="796" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#142D4E" font-weight="400" text-anchor="start">已预订 → 在售 / 已下架</text>
+<text x="700" y="796" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">订单取消或关闭后，逐件按 BR-22 判断；违规下架保持</text>
+<path d="M65,812 L1570,812" fill="none" stroke="#CED9E5" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="65" y="844" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#142D4E" font-weight="600" text-anchor="start">ST-P08</text>
+<text x="215" y="844" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#142D4E" font-weight="400" text-anchor="start">在售 / 审核驳回 → 已下架</text>
+<text x="700" y="844" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">本人撤下；有进行中订单时不允许主动下架或改关键约定</text>
+<path d="M65,860 L1570,860" fill="none" stroke="#CED9E5" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="65" y="892" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#142D4E" font-weight="600" text-anchor="start">ST-P09</text>
+<text x="215" y="892" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#142D4E" font-weight="400" text-anchor="start">在售 / 已预订 → 违规下架</text>
+<text x="700" y="892" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">管理员记录依据；预订物品同步暂停订单</text>
+<path d="M65,908 L1570,908" fill="none" stroke="#CED9E5" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="65" y="940" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#142D4E" font-weight="600" text-anchor="start">ST-P10</text>
+<text x="215" y="940" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#142D4E" font-weight="400" text-anchor="start">已下架 → 待审核</text>
+<text x="700" y="940" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">本人重新提交，必须再审，不直接回在售</text>
+<path d="M65,956 L1570,956" fill="none" stroke="#CED9E5" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="65" y="988" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#142D4E" font-weight="600" text-anchor="start">ST-P11</text>
+<text x="215" y="988" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#142D4E" font-weight="400" text-anchor="start">草稿 → 删除</text>
+<text x="700" y="988" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">仅本人、未进入审核及交易；不得删除已关联交易证据</text>
+<rect x="40" y="1110" width="1560" height="75" rx="16" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="60" y="1142" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" fill="#142D4E" font-weight="600" text-anchor="start">BR-22 恢复条件</text>
+<text x="60" y="1168" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">发布者正常、认证有效、商品无违规且无其他进行中订单才恢复在售；仅目标商品判断恢复，提供项快照保留，不生成或恢复商品。</text>
+<text x="42" y="1232" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">V1.9 · 分模块优化稿 · 细则待小组复核；图示不代表已实现或测试通过</text>
+</svg>

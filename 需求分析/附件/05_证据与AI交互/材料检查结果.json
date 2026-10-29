@@ -1,0 +1,148 @@
+{
+  "version": "V2.0",
+  "generated_at": "2026-10-29T14:42:01.137325+08:00",
+  "scope": "mechanical material checks, not independent approval or software tests",
+  "checks": [
+    {
+      "check": "UC declarations",
+      "result": "pass",
+      "detail": "expect 25 unique sequential IDs; found 25"
+    },
+    {
+      "check": "BR declarations",
+      "result": "pass",
+      "detail": "expect 23 unique sequential IDs; found 23"
+    },
+    {
+      "check": "DC declarations",
+      "result": "pass",
+      "detail": "expect 9 unique sequential IDs; found 9"
+    },
+    {
+      "check": "QR declarations",
+      "result": "pass",
+      "detail": "expect 11 unique sequential IDs; found 11"
+    },
+    {
+      "check": "AC declarations",
+      "result": "pass",
+      "detail": "expect 18 unique sequential IDs; found 18"
+    },
+    {
+      "check": "VT scenarios",
+      "result": "pass",
+      "detail": "35 sequential scenarios, all not executed; no behavioral result inferred"
+    },
+    {
+      "check": "report versions",
+      "result": "pass",
+      "detail": "Current document versions; does not examine all historical version mentions"
+    },
+    {
+      "check": "model files",
+      "result": "pass",
+      "detail": "10 semantic sources and 13 SVG views; no PlantUML compilation"
+    },
+    {
+      "check": "SVG M-03-用例图.svg",
+      "result": "pass",
+      "detail": "XML and text anchor bounds only; actual glyph extents/edge routing need visual review"
+    },
+    {
+      "check": "SVG M-07B-订单与履约.svg",
+      "result": "pass",
+      "detail": "XML and text anchor bounds only; actual glyph extents/edge routing need visual review"
+    },
+    {
+      "check": "SVG M-07C-反馈与治理.svg",
+      "result": "pass",
+      "detail": "XML and text anchor bounds only; actual glyph extents/edge routing need visual review"
+    },
+    {
+      "check": "SVG M-07-领域类图.svg",
+      "result": "pass",
+      "detail": "XML and text anchor bounds only; actual glyph extents/edge routing need visual review"
+    },
+    {
+      "check": "SVG M-04-活动图-商品发布与审核.svg",
+      "result": "pass",
+      "detail": "XML and text anchor bounds only; actual glyph extents/edge routing need visual review"
+    },
+    {
+      "check": "SVG M-09-状态图-订单.svg",
+      "result": "pass",
+      "detail": "XML and text anchor bounds only; actual glyph extents/edge routing need visual review"
+    },
+    {
+      "check": "SVG M-02-系统上下文图.svg",
+      "result": "pass",
+      "detail": "XML and text anchor bounds only; actual glyph extents/edge routing need visual review"
+    },
+    {
+      "check": "SVG M-06-活动图-举报处理.svg",
+      "result": "pass",
+      "detail": "XML and text anchor bounds only; actual glyph extents/edge routing need visual review"
+    },
+    {
+      "check": "SVG M-10-验收执行流程.svg",
+      "result": "pass",
+      "detail": "XML and text anchor bounds only; actual glyph extents/edge routing need visual review"
+    },
+    {
+      "check": "SVG M-01-目标树.svg",
+      "result": "pass",
+      "detail": "XML and text anchor bounds only; actual glyph extents/edge routing need visual review"
+    },
+    {
+      "check": "SVG M-08-状态图-商品.svg",
+      "result": "pass",
+      "detail": "XML and text anchor bounds only; actual glyph extents/edge routing need visual review"
+    },
+    {
+      "check": "SVG M-05-活动图-交易流程.svg",
+      "result": "pass",
+      "detail": "XML and text anchor bounds only; actual glyph extents/edge routing need visual review"
+    },
+    {
+      "check": "SVG M-07A-账号与商品.svg",
+      "result": "pass",
+      "detail": "XML and text anchor bounds only; actual glyph extents/edge routing need visual review"
+    },
+    {
+      "check": "evidence links",
+      "result": "pass",
+      "detail": "Current local evidence inputs exist; two report outputs are produced by this run; E-01 and E-06 remain missing; E-02 acquired"
+    },
+    {
+      "check": "classroom SVG copy",
+      "result": "pass",
+      "detail": "Current classroom copy matches; historical archive untouched"
+    },
+    {
+      "check": "archive snapshot consistency",
+      "result": "pass",
+      "detail": "Three local V1.1 texts equal archived entries inside current ZIP snapshot; does not establish provenance of the originally received ZIP"
+    },
+    {
+      "check": "direct exchange offer choice",
+      "result": "pass",
+      "detail": "User selected no prerequisite publish/review; offer stays order-private"
+    },
+    {
+      "check": "optional offer product association",
+      "result": "pass",
+      "detail": "Target item has product; direct offer has no product link"
+    },
+    {
+      "check": "no stale double locks",
+      "result": "pass",
+      "detail": "No second product lock or public restoration for direct offer"
+    }
+  ],
+  "known_missing": [
+    "E-01 course original",
+    "E-06 complete AI conversation exports"
+  ],
+  "business_scenarios": "35 not executed",
+  "all_listed_checks_pass": true
+}

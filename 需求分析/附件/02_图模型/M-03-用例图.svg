@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1760" height="1050" viewBox="0 0 1760 1050" role="img" aria-labelledby="title desc"><title id="title">M-03 按参与者分区的用例图</title><desc id="desc">各分区用关联线连接参与者与用例；同名参与者可重复出现；先后步骤不画成 extend。V2.0 优化稿，用户规则已确认，待小组评审，非执行验证结果。</desc><defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="#60778F"/></marker></defs>
+<rect x="0" y="0" width="1760" height="1050" rx="0" fill="#F6F8FC" stroke="#CED9E5"/>
+<text x="42" y="47" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" fill="#142D4E" font-weight="600" text-anchor="start">M-03 按参与者分区的用例图</text>
+<text x="42" y="79" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">各分区用关联线连接参与者与用例；同名参与者可重复出现；先后步骤不画成 extend</text>
+<path d="M42,100 L1718,100" fill="none" stroke="#CED9E5" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="32" y="125" width="402" height="790" rx="16" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="52" y="157" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" fill="#142D4E" font-weight="600" text-anchor="start">公开访问</text>
+<circle cx="74" cy="189" r="10" fill="white" stroke="#60778F"/>
+<path d="M74,199 L74,234" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M59,211 L89,211" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M74,234 L61,252" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M74,234 L87,252" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="49" y="277" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">访客</text>
+<ellipse cx="292" cy="215" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="292" y="220" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-01 注册账号</text>
+<path d="M123,215 L171,215" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="292" cy="288" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="292" y="293" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-02 登录</text>
+<path d="M123,288 L171,288" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="292" cy="361" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="292" y="366" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-07 浏览搜索</text>
+<path d="M123,361 L171,361" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="292" cy="434" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="292" y="439" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-08 查看详情</text>
+<path d="M123,434 L171,434" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M89,211 L123,211" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M123,215 L123,434" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="50" y="850" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">仅公开字段；受保护操作先登录。</text>
+<rect x="464" y="125" width="402" height="790" rx="16" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="484" y="157" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" fill="#142D4E" font-weight="600" text-anchor="start">一般账号能力</text>
+<circle cx="506" cy="189" r="10" fill="white" stroke="#60778F"/>
+<path d="M506,199 L506,234" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M491,211 L521,211" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M506,234 L493,252" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M506,234 L519,252" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="481" y="277" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">注册用户</text>
+<ellipse cx="724" cy="215" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="724" y="220" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-02 登录 / 退出</text>
+<path d="M555,215 L603,215" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="724" cy="288" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="724" y="293" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-03 提交校园认证</text>
+<path d="M555,288 L603,288" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="724" cy="361" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="724" y="366" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-04 维护个人资料</text>
+<path d="M555,361 L603,361" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="724" cy="434" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="724" y="439" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-07 浏览搜索</text>
+<path d="M555,434 L603,434" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="724" cy="507" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="724" y="512" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-08 查看详情</text>
+<path d="M555,507 L603,507" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="724" cy="580" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="724" y="585" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-09 收藏商品</text>
+<path d="M555,580 L603,580" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="724" cy="653" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="724" y="658" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-17 举报对象</text>
+<path d="M555,653 L603,653" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="724" cy="726" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="724" y="731" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-23 接收 / 查看通知</text>
+<path d="M555,726 L603,726" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M521,211 L555,211" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M555,215 L555,726" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="482" y="850" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">未认证账号可收藏、举报。</text>
+<text x="482" y="871" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">站内通知仅本人可读。</text>
+<rect x="896" y="125" width="402" height="790" rx="16" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="916" y="157" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" fill="#142D4E" font-weight="600" text-anchor="start">交易能力</text>
+<circle cx="938" cy="189" r="10" fill="white" stroke="#60778F"/>
+<path d="M938,199 L938,234" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M923,211 L953,211" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M938,234 L925,252" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M938,234 L951,252" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="913" y="277" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">已认证用户</text>
+<ellipse cx="1156" cy="215" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1156" y="220" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-05 发布商品</text>
+<path d="M987,215 L1035,215" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="1156" cy="288" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1156" y="293" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-06 管理本人商品</text>
+<path d="M987,288 L1035,288" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="1156" cy="361" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1156" y="366" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-10 发起咨询 / 回复</text>
+<path d="M987,361 L1035,361" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="1156" cy="434" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1156" y="439" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-11 买家下单</text>
+<path d="M987,434 L1035,434" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="1156" cy="507" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1156" y="512" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-12 卖家接单 / 拒绝</text>
+<path d="M987,507 L1035,507" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="1156" cy="580" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1156" y="585" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-13 按阶段取消</text>
+<path d="M987,580 L1035,580" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="1156" cy="653" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1156" y="658" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-14 记录线下交付</text>
+<path d="M987,653 L1035,653" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="1156" cy="726" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1156" y="731" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-15 双方各自确认</text>
+<path d="M987,726 L1035,726" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="1156" cy="799" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1156" y="804" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-16 评价交易对象</text>
+<path d="M987,799 L1035,799" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M953,211 L987,211" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M987,215 L987,799" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="914" y="850" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">继承一般账号能力。</text>
+<text x="914" y="871" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">另查账号状态、归属与交易阶段。</text>
+<rect x="1328" y="125" width="400" height="790" rx="16" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="1348" y="157" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" fill="#142D4E" font-weight="600" text-anchor="start">管理能力</text>
+<circle cx="1370" cy="189" r="10" fill="white" stroke="#60778F"/>
+<path d="M1370,199 L1370,234" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M1355,211 L1385,211" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M1370,234 L1357,252" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M1370,234 L1383,252" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="1345" y="277" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">管理员</text>
+<ellipse cx="1586" cy="215" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1586" y="220" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-24 审核校园认证</text>
+<path d="M1419,215 L1465,215" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="1586" cy="288" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1586" y="293" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-18 审核商品</text>
+<path d="M1419,288 L1465,288" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="1586" cy="361" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1586" y="366" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-19 处理举报</text>
+<path d="M1419,361 L1465,361" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="1586" cy="434" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1586" y="439" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-20 限制 / 封禁 / 解禁</text>
+<path d="M1419,434 L1465,434" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="1586" cy="507" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1586" y="512" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-21 违规下架</text>
+<path d="M1419,507 L1465,507" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="1586" cy="580" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1586" y="585" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-25 处理异常订单</text>
+<path d="M1419,580 L1465,580" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<ellipse cx="1586" cy="653" rx="121" ry="25" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1586" y="658" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#142D4E" font-weight="400" text-anchor="middle">UC-22 查看统计</text>
+<path d="M1419,653 L1465,653" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M1385,211 L1419,211" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<path d="M1419,215 L1419,653" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="1346" y="850" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">使用管理账号登录（UC-02）。</text>
+<text x="1346" y="871" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">不代替交易双方确认或评价。</text>
+<rect x="32" y="940" width="1696" height="58" rx="16" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="52" y="972" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" fill="#142D4E" font-weight="600" text-anchor="start">授权规则：先检查身份与账号状态，再检查对象归属、交易阶段和暂停状态。</text>
+<text x="42" y="1032" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">V2.0 · 分模块优化稿 · 规则已确认，业务待验证；图示不代表已实现或测试通过</text>
+</svg>

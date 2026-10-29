@@ -1,0 +1,98 @@
+{
+  "version": "V2.0",
+  "date": "2026-10-29",
+  "scope": "diagram QA only; 35 business scenarios unexecuted",
+  "figures": [
+    {
+      "file": "M-01-目标树.svg",
+      "xml_and_text_anchors": "pass",
+      "render": "sharp/librsvg to PNG",
+      "visual_review": "V2.0 rendered contact sheet reviewed; M-03, M-07B, M-07C and M-09 also inspected full size",
+      "limits": "anchor bounds do not measure glyph extents; no business execution inferred"
+    },
+    {
+      "file": "M-02-系统上下文图.svg",
+      "xml_and_text_anchors": "pass",
+      "render": "sharp/librsvg to PNG",
+      "visual_review": "V2.0 rendered contact sheet reviewed; M-03, M-07B, M-07C and M-09 also inspected full size",
+      "limits": "anchor bounds do not measure glyph extents; no business execution inferred"
+    },
+    {
+      "file": "M-03-用例图.svg",
+      "xml_and_text_anchors": "pass",
+      "render": "sharp/librsvg to PNG",
+      "visual_review": "V2.0 rendered contact sheet reviewed; M-03, M-07B, M-07C and M-09 also inspected full size",
+      "limits": "anchor bounds do not measure glyph extents; no business execution inferred"
+    },
+    {
+      "file": "M-04-活动图-商品发布与审核.svg",
+      "xml_and_text_anchors": "pass",
+      "render": "sharp/librsvg to PNG",
+      "visual_review": "V2.0 rendered contact sheet reviewed; M-03, M-07B, M-07C and M-09 also inspected full size",
+      "limits": "anchor bounds do not measure glyph extents; no business execution inferred"
+    },
+    {
+      "file": "M-05-活动图-交易流程.svg",
+      "xml_and_text_anchors": "pass",
+      "render": "sharp/librsvg to PNG",
+      "visual_review": "V2.0 rendered contact sheet reviewed; M-03, M-07B, M-07C and M-09 also inspected full size",
+      "limits": "anchor bounds do not measure glyph extents; no business execution inferred"
+    },
+    {
+      "file": "M-06-活动图-举报处理.svg",
+      "xml_and_text_anchors": "pass",
+      "render": "sharp/librsvg to PNG",
+      "visual_review": "V2.0 rendered contact sheet reviewed; M-03, M-07B, M-07C and M-09 also inspected full size",
+      "limits": "anchor bounds do not measure glyph extents; no business execution inferred"
+    },
+    {
+      "file": "M-07-领域类图.svg",
+      "xml_and_text_anchors": "pass",
+      "render": "sharp/librsvg to PNG",
+      "visual_review": "V2.0 rendered contact sheet reviewed; M-03, M-07B, M-07C and M-09 also inspected full size",
+      "limits": "anchor bounds do not measure glyph extents; no business execution inferred"
+    },
+    {
+      "file": "M-07A-账号与商品.svg",
+      "xml_and_text_anchors": "pass",
+      "render": "sharp/librsvg to PNG",
+      "visual_review": "V2.0 rendered contact sheet reviewed; M-03, M-07B, M-07C and M-09 also inspected full size",
+      "limits": "anchor bounds do not measure glyph extents; no business execution inferred"
+    },
+    {
+      "file": "M-07B-订单与履约.svg",
+      "xml_and_text_anchors": "pass",
+      "render": "sharp/librsvg to PNG",
+      "visual_review": "V2.0 rendered contact sheet reviewed; M-03, M-07B, M-07C and M-09 also inspected full size",
+      "limits": "anchor bounds do not measure glyph extents; no business execution inferred"
+    },
+    {
+      "file": "M-07C-反馈与治理.svg",
+      "xml_and_text_anchors": "pass",
+      "render": "sharp/librsvg to PNG",
+      "visual_review": "V2.0 rendered contact sheet reviewed; M-03, M-07B, M-07C and M-09 also inspected full size",
+      "limits": "anchor bounds do not measure glyph extents; no business execution inferred"
+    },
+    {
+      "file": "M-08-状态图-商品.svg",
+      "xml_and_text_anchors": "pass",
+      "render": "sharp/librsvg to PNG",
+      "visual_review": "V2.0 rendered contact sheet reviewed; M-03, M-07B, M-07C and M-09 also inspected full size",
+      "limits": "anchor bounds do not measure glyph extents; no business execution inferred"
+    },
+    {
+      "file": "M-09-状态图-订单.svg",
+      "xml_and_text_anchors": "pass",
+      "render": "sharp/librsvg to PNG",
+      "visual_review": "V2.0 rendered contact sheet reviewed; M-03, M-07B, M-07C and M-09 also inspected full size",
+      "limits": "anchor bounds do not measure glyph extents; no business execution inferred"
+    },
+    {
+      "file": "M-10-验收执行流程.svg",
+      "xml_and_text_anchors": "pass",
+      "render": "sharp/librsvg to PNG",
+      "visual_review": "V2.0 rendered contact sheet reviewed; M-03, M-07B, M-07C and M-09 also inspected full size",
+      "limits": "anchor bounds do not measure glyph extents; no business execution inferred"
+    }
+  ]
+}

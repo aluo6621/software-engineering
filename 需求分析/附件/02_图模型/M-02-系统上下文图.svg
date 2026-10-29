@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc"><title id="title">M-02 系统上下文</title><desc id="desc">本期仅本校学生；人工审核姓名学号；线下付款不是平台接口。V2.0 优化稿，用户规则已确认，待小组评审，非执行验证结果。</desc><defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="#60778F"/></marker></defs>
+<rect x="0" y="0" width="1440" height="900" rx="0" fill="#F6F8FC" stroke="#CED9E5"/>
+<text x="42" y="47" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" fill="#142D4E" font-weight="600" text-anchor="start">M-02 系统上下文</text>
+<text x="42" y="79" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">本期仅本校学生；人工审核姓名学号；线下付款不是平台接口</text>
+<path d="M42,100 L1398,100" fill="none" stroke="#CED9E5" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="45" y="150" width="280" height="110" rx="12" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="61" y="179" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">访客</text>
+<text x="61" y="206" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">注册 / 登录</text>
+<text x="61" y="230" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">浏览公开商品</text>
+<rect x="45" y="340" width="280" height="150" rx="12" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="61" y="369" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">注册用户</text>
+<text x="61" y="396" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">未认证：资料 / 收藏 / 举报</text>
+<text x="61" y="420" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">已认证：发布 / 咨询 / 下单</text>
+<text x="61" y="444" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">双方：履约 / 本人确认 / 评价</text>
+<rect x="45" y="570" width="280" height="130" rx="12" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="61" y="599" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">管理员</text>
+<text x="61" y="626" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">认证与商品审核、举报处置</text>
+<text x="61" y="650" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">账号与商品管理、异常订单</text>
+<text x="61" y="674" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">统计与必要敏感读取留痕</text>
+<rect x="465" y="250" width="510" height="350" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="481" y="279" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">校园二手交易与物品流转平台</text>
+<text x="481" y="306" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">账号认证 │ 商品与发现</text>
+<text x="481" y="330" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">咨询订单 │ 交付与双方确认</text>
+<text x="481" y="354" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">评价举报 │ 处置与统计</text>
+<text x="481" y="378" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start"></text>
+<text x="481" y="402" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">业务：出售 / 免费转让 / 交换</text>
+<text x="481" y="426" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">平台内支付、租用、押金、跑腿不纳入</text>
+<path d="M325,205.0 L395,205.0 L395,310 L465,310" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M325,415.0 L395,415.0 L395,420 L465,420" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M325,635.0 L395,635.0 L395,540 L465,540" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="1110" y="330" width="285" height="155" rx="12" fill="#FFF4DD" stroke="#CED9E5"/>
+<text x="1126" y="359" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">本期认证边界</text>
+<text x="1126" y="386" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">仅本校学生，提交姓名和学号</text>
+<text x="1126" y="410" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">管理员线下核验后记录结论</text>
+<text x="1126" y="434" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">不上传证件，不接统一认证接口</text>
+<rect x="465" y="665" width="930" height="145" rx="16" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="485" y="697" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" fill="#142D4E" font-weight="600" text-anchor="start">平台之外的实际活动</text>
+<text x="485" y="728" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#53677F" font-weight="400" text-anchor="start">双方当面交付实物；有价款时自行转账。</text>
+<text x="485" y="754" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#53677F" font-weight="400" text-anchor="start">平台保存约定与声明，不验证银行或微信到账，不代办退款。</text>
+<text x="485" y="780" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#53677F" font-weight="400" text-anchor="start">站内通知已纳入；订单列表与详情始终提供进度入口。</text>
+<text x="42" y="882" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">V2.0 · 分模块优化稿 · 规则已确认，业务待验证；图示不代表已实现或测试通过</text>
+</svg>

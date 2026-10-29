@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1640" height="1560" viewBox="0 0 1640 1560" role="img" aria-labelledby="title desc"><title id="title">M-07C 领域模型 · 反馈、咨询与治理</title><desc id="desc">M-07 分图 3/3 · 用户/订单/商品为重复引用；仅画本分图所需关系。V2.0 优化稿，用户规则已确认，待小组评审，非执行验证结果。</desc><defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="#60778F"/></marker></defs>
+<rect x="0" y="0" width="1640" height="1560" rx="0" fill="#F6F8FC" stroke="#CED9E5"/>
+<text x="42" y="47" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" fill="#142D4E" font-weight="600" text-anchor="start">M-07C 领域模型 · 反馈、咨询与治理</text>
+<text x="42" y="79" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">M-07 分图 3/3 · 用户/订单/商品为重复引用；仅画本分图所需关系</text>
+<path d="M42,100 L1598,100" fill="none" stroke="#CED9E5" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="50" y="145" width="350" height="117" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="66" y="174" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">User 用户（引用）</text>
+<text x="66" y="201" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">普通用户或管理账号</text>
+<text x="66" y="225" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">管理操作须管理员权限</text>
+<rect x="660" y="145" width="350" height="117" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="676" y="174" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">Order 订单（引用）</text>
+<text x="676" y="201" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">双方和阶段可验证</text>
+<text x="676" y="225" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">举报背景关联为可选</text>
+<rect x="1230" y="145" width="350" height="117" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1246" y="174" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">Product 商品（引用）</text>
+<text x="1246" y="201" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">有权访问才可举报</text>
+<text x="1246" y="225" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">收藏不扩大访问资格</text>
+<rect x="50" y="485" width="440" height="142" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="66" y="514" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">Review 评价</text>
+<text x="66" y="541" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">orderId / reviewerId / revieweeId</text>
+<text x="66" y="565" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">rating / content / createdAt</text>
+<text x="66" y="589" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">replyContent / repliedBy / repliedAt</text>
+<rect x="600" y="485" width="440" height="167" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="616" y="514" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">Report 举报</text>
+<text x="616" y="541" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">reporterId / targetType / targetId</text>
+<text x="616" y="565" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">relatedOrderId（可选）/ evidenceRefs</text>
+<text x="616" y="589" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">status / 处理人时间 / result</text>
+<text x="616" y="613" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">groupRef 分组不扩大访问</text>
+<rect x="1150" y="485" width="440" height="142" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1166" y="514" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">Consultation 咨询</text>
+<text x="1166" y="541" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">productId / askerId / content</text>
+<text x="1166" y="565" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">reply / repliedBy / repliedAt</text>
+<text x="1166" y="589" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">仅提问者与发布者可读</text>
+<path d="M225,262 L225,485" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="237" y="290" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">1 评价人 / 被评价人</text>
+<text x="237" y="470" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">0..*</text>
+<path d="M835,262 L835,355 L270,355 L270,485" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="846" y="290" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">1</text>
+<text x="282" y="446" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">0..2</text>
+<path d="M400,205 L530,205 L530,415 L820,415 L820,485" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="415" y="192" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">1 举报人</text>
+<text x="834" y="470" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">0..*</text>
+<path d="M940,262 L940,485" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="950" y="288" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">0..1 订单背景</text>
+<text x="951" y="470" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">0..*</text>
+<path d="M1405,262 L1405,485" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="1416" y="290" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">1</text>
+<text x="1416" y="470" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">0..*</text>
+<rect x="1150" y="900" width="440" height="117" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1166" y="929" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">Favorite 收藏</text>
+<text x="1166" y="956" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">userId / productId / createdAt</text>
+<text x="1166" y="980" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">同用户同商品最多一条</text>
+<path d="M1580,205 L1610,205 L1610,850 L1370,850 L1370,900" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="1540" y="190" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">1</text>
+<text x="1384" y="882" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">0..*</text>
+<rect x="50" y="900" width="700" height="142" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="66" y="929" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">AdminAction 管理员记录</text>
+<text x="66" y="956" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">adminId / actionType / 主对象与关联对象 / time</text>
+<text x="66" y="980" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">reason / evidenceRefs / beforeAfterSummary</text>
+<text x="66" y="1004" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">记录审核、处置、异常订单处理及敏感读取</text>
+<path d="M50,215 L25,215 L25,840 L225,840 L225,900" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="40" y="825" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#142D4E" font-weight="400" text-anchor="start">1 管理员 → 0..* 操作</text>
+<text x="800" y="950" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#142D4E" font-weight="600" text-anchor="start">其他关联（不穿越主图）：</text>
+<text x="800" y="981" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">User 1 → 0..* Favorite / Consultation</text>
+<text x="800" y="1006" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">Product 1 → 0..* Favorite</text>
+<text x="800" y="1031" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">AdminAction 0..1 → 0..* OrderEvent</text>
+<text x="800" y="1056" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">Report 的对象是商品或用户；不扩展访问权</text>
+<rect x="50" y="1190" width="700" height="142" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="66" y="1219" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">Notification 站内通知</text>
+<text x="66" y="1246" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">notificationId / recipientId / eventKey</text>
+<text x="66" y="1270" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">type / subjectRef / content / createdAt / readAt</text>
+<text x="66" y="1294" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">同接收人同事件唯一，仅本人读取及标记已读</text>
+<path d="M50,190 L12,190 L12,1280 L50,1280" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="65" y="1430" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="16" fill="#142D4E" font-weight="400" text-anchor="start">User 1 → 0..* Notification；通知失败可重试，不回滚交易结果。</text>
+<text x="42" y="1542" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">V2.0 · 分模块优化稿 · 规则已确认，业务待验证；图示不代表已实现或测试通过</text>
+</svg>

@@ -1,0 +1,257 @@
+{
+  "scope": "reorganized submission snapshot; no approval implied",
+  "files": [
+    {
+      "path": "00_提交说明.md",
+      "sha256": "7a66985fb05127819a83a139d0d56f56f5e887666c5843131facb9ddf2f1bfbb"
+    },
+    {
+      "path": "01_需求规格说明书.md",
+      "sha256": "9adc6a4ce7c97bb9bab2f1c9eadaef97a118d74201c85d43635716d136c8dbc0"
+    },
+    {
+      "path": "02_需求分析质量验证报告.md",
+      "sha256": "22092f3d3ad8a1f17a55329987a7509737a99fb958f8b56ebe849d34b43dc198"
+    },
+    {
+      "path": "03_AI智能体使用验证报告.md",
+      "sha256": "9dc6abfa424b221f47079b8961a6b5b1ba52d1d284f01ba4f1c826720a0bf983"
+    },
+    {
+      "path": "附件/00_附件索引.md",
+      "sha256": "c505600fe858fc5bb210503c3f99e3e8e5e3926d1420bb564324230c472eccac"
+    },
+    {
+      "path": "附件/01_业务依据/提交界面_用户提供.png",
+      "sha256": "85e165d4c3e6cff287ed940985291c96f0c2d44ae8f164c97c201590284a79a5"
+    },
+    {
+      "path": "附件/01_业务依据/用户决定摘录.md",
+      "sha256": "d091200140f1f22294e6e6e369a55d4b923a007a0a667e616f9da7b5e678d359"
+    },
+    {
+      "path": "附件/01_业务依据/课程报告要求_交换文件恢复稿.md",
+      "sha256": "8ba6295d70837ce3b4c32135d64e0a40c94fd5773cfc051c141311d9b52b5c65"
+    },
+    {
+      "path": "附件/01_业务依据/课程要求_学生需求分析与AI智能体使用验证报告_完整原件.md",
+      "sha256": "83a7cf00244652fd836f5b263fd6db84085f1873a2bf3067955be28c10bb8ee1"
+    },
+    {
+      "path": "附件/01_业务依据/课程要求对照检查报告.md",
+      "sha256": "7f5e0667df25320f8475ccc9fe3de1f933e3b3e5f64e9508cfc99567a43f88c3"
+    },
+    {
+      "path": "附件/01_业务依据/需求集中确认记录.md",
+      "sha256": "7848cda66c58fb3ff0adf7b476be77daecac70422308baa99955dafe7fb7d482"
+    },
+    {
+      "path": "附件/02_图模型/AGENTS.md",
+      "sha256": "b33977acf0f2c13ce31b03dda8cd156f6f7e4e4490185192fd9b3c5c096e758c"
+    },
+    {
+      "path": "附件/02_图模型/M-01-goal-tree.puml",
+      "sha256": "6f4cba71c7d5735dcc91fe44f724790811334ced1f9c0d9c85ba96a78d613a6a"
+    },
+    {
+      "path": "附件/02_图模型/M-01-目标树.svg",
+      "sha256": "0e092291e6b9e9c9dada79615537a72c4a07f64107186d4a5382c15f0e52626b"
+    },
+    {
+      "path": "附件/02_图模型/M-02-context.puml",
+      "sha256": "29ec70a54e6b9b8f0dc11640b5bf7b6942c72153cfc447a85ab6bd44851b1f22"
+    },
+    {
+      "path": "附件/02_图模型/M-02-系统上下文图.svg",
+      "sha256": "b70e826f99d6b74b1d846e1620db9bed2bfa26d631a942aaf6ca1a0c17cf0cb2"
+    },
+    {
+      "path": "附件/02_图模型/M-03-usecase.puml",
+      "sha256": "b71a8ff3c7f57b34714941f7fe8c59b32d004543fd9aac5cace21c295d0103fa"
+    },
+    {
+      "path": "附件/02_图模型/M-03-用例图.svg",
+      "sha256": "c133d7c6ad0c191bb3a4ca41e3ea2568ad512bf96b05d95f82c615f17d00c615"
+    },
+    {
+      "path": "附件/02_图模型/M-04-activity-publish.puml",
+      "sha256": "11f8989d8ddf8376a1aafde072ae21427e91bc102f32757749d438d32df0abaf"
+    },
+    {
+      "path": "附件/02_图模型/M-04-活动图-商品发布与审核.svg",
+      "sha256": "003b7f0ee406ee2dc82140f44f095d3570614825995c5494fe18b7323a9f9ad7"
+    },
+    {
+      "path": "附件/02_图模型/M-05-activity-trade.puml",
+      "sha256": "26d7f42bc2b2288a10c34c7a8d207d142e8c49d35628fc5c26eb711d3a96cf28"
+    },
+    {
+      "path": "附件/02_图模型/M-05-活动图-交易流程.svg",
+      "sha256": "589399e9054933ebe2fecd521847e17ea68e09302ee36f2cb8c90668727fe5d4"
+    },
+    {
+      "path": "附件/02_图模型/M-06-activity-report.puml",
+      "sha256": "33872d46bda6e47969b9a9c4f656142342505bfe5d26284932991291f5df1748"
+    },
+    {
+      "path": "附件/02_图模型/M-06-活动图-举报处理.svg",
+      "sha256": "bdad6d523273c8c98f11b6b097b27a0e487dc18a861415c3c54d27e381fccb4a"
+    },
+    {
+      "path": "附件/02_图模型/M-07-domain-class.puml",
+      "sha256": "6a9a9cbe7bd78a81f97f667341568b1809a76dbc3b9f7ae1ed97d989b4637973"
+    },
+    {
+      "path": "附件/02_图模型/M-07-领域类图.svg",
+      "sha256": "9593c2f709656e1310486beadddbd9b6890f05a6910add1585a7e2f27667a93e"
+    },
+    {
+      "path": "附件/02_图模型/M-07A-账号与商品.svg",
+      "sha256": "f2cdb3f934af6b0bf92d390cfac53aa0a8517eb801cb4ea6f898b5e6f0a0dc77"
+    },
+    {
+      "path": "附件/02_图模型/M-07B-订单与履约.svg",
+      "sha256": "c01900a6b16a0ffa9033dd035182d895d58eee9fb1e405c8f5e00f8f3f54b293"
+    },
+    {
+      "path": "附件/02_图模型/M-07C-反馈与治理.svg",
+      "sha256": "53c49f927d1518dfc96e4f2db41bf79f71197ffc913c1e095ee18bf896029cdc"
+    },
+    {
+      "path": "附件/02_图模型/M-08-state-product.puml",
+      "sha256": "6cd9eb377e02c69f0a346105880936b6b93a68bb3e2bb501b9a43c2e10c49bb8"
+    },
+    {
+      "path": "附件/02_图模型/M-08-状态图-商品.svg",
+      "sha256": "ca85ae81b3e604f5b4e2fc2bc0a4028e04a8a7fee929fbf72d844c4e262e10f9"
+    },
+    {
+      "path": "附件/02_图模型/M-09-state-order.puml",
+      "sha256": "eed423511b255ef90722adb4ac48c152bf42b1251b50d593a43aacfa087734e9"
+    },
+    {
+      "path": "附件/02_图模型/M-09-状态图-订单.svg",
+      "sha256": "f7a9bb3cf2ee0ac71ecea8ec26c7aa110dc1c27153e0604824ab902b2694ebc4"
+    },
+    {
+      "path": "附件/02_图模型/M-10-validation.puml",
+      "sha256": "39efd23d740f5417a81cdcc8cc9fd3f20878855fe3e7304ebc04aef0dd9579c4"
+    },
+    {
+      "path": "附件/02_图模型/M-10-验收执行流程.svg",
+      "sha256": "e02e0506cdaaf62460f5e2020d6e6d8f4a92dd196b4a893fe626b92b43714d58"
+    },
+    {
+      "path": "附件/02_图模型/README.md",
+      "sha256": "a05f099fa444dc1980f39c3056988fb4ea1ef48e9ebb36cc6605417a11b5fa51"
+    },
+    {
+      "path": "附件/02_图模型/tools/build_svgs.py",
+      "sha256": "4ccae348de023a86a34048a76761bf369a932921b9f904d99b55a47925669961"
+    },
+    {
+      "path": "附件/02_图模型/图册.html",
+      "sha256": "eeda761db197b97ed0a698da7638af718b46eee09c791ee77589a7c3e9018f9c"
+    },
+    {
+      "path": "附件/02_图模型/图示检查记录.json",
+      "sha256": "1b336884b1405c4157cbb4933e36d7254243da8da9286ed312e9d9a1b1f81047"
+    },
+    {
+      "path": "附件/03_原型/README.md",
+      "sha256": "bcaf596e8cdf1caa4330eb885aea9176afd269d577d7d8590a5bc98c2c49ed4e"
+    },
+    {
+      "path": "附件/03_原型/app.js",
+      "sha256": "23edf25c38201c9b0c6a30d1b8994333b98609cdd48ff430a68a69d8c869816b"
+    },
+    {
+      "path": "附件/03_原型/check-prototype.cjs",
+      "sha256": "11bdd9284c503e115fb9ed9b4e60926561dc42a64f547373eddc6af33e125147"
+    },
+    {
+      "path": "附件/03_原型/index.html",
+      "sha256": "e60172b3494b01848dd7881bcc6ed6ff5bdbdc5cebaa8dcc9a07fbb257b35df3"
+    },
+    {
+      "path": "附件/03_原型/style.css",
+      "sha256": "0c177d8855a394552f1f889625becbb9bf0eb50eb9995c96d9a689979bb049b6"
+    },
+    {
+      "path": "附件/03_原型/检查结果.json",
+      "sha256": "674c7ab6a003b1060db35c673596850594e435d005a4bccf936f5c8bbcb3b700"
+    },
+    {
+      "path": "附件/04_走查与验证/AI反向走查结果.md",
+      "sha256": "3fdca4256e25c42f054d0ac996cf00f5314683845ed3d628a1511a9eca66adc2"
+    },
+    {
+      "path": "附件/04_走查与验证/场景走查稿.md",
+      "sha256": "f5de2c6c5f8d792179fbd34396ec2624ec69998061d4c667f24fed74c1188401"
+    },
+    {
+      "path": "附件/04_走查与验证/成员分工与贡献确认.md",
+      "sha256": "f6e38898523cde8d03f9330ea7da0fa72493778bd65a04b224d516fca20a2efd"
+    },
+    {
+      "path": "附件/04_走查与验证/提交收尾清单.md",
+      "sha256": "a95529c9c18276514f3b1579eabce2f0852c329ddc2bad5190f29cf7e48940c6"
+    },
+    {
+      "path": "附件/04_走查与验证/收尾处理结论.md",
+      "sha256": "aef1c5afbce1c67cd37ffb8e31a92ba521eb047383e50c2e022451de9e9a6f53"
+    },
+    {
+      "path": "附件/04_走查与验证/验收场景清单.md",
+      "sha256": "59802bc1c095ff079abf9ecb96af1072d08df13f9530c96375956cd36b5edad0"
+    },
+    {
+      "path": "附件/05_证据与AI交互/人工确认与执行记录模板.md",
+      "sha256": "f10f36285a8540258e58dfd4e2374c01322720169066c8d1667e6493c0d9bdd1"
+    },
+    {
+      "path": "附件/05_证据与AI交互/关键AI交互上下文.md",
+      "sha256": "ff4c8ea99edff75e985a379c0790a96e2704b1df775a83f086b30ad0b64e3ff8"
+    },
+    {
+      "path": "附件/05_证据与AI交互/原型页面_用户提供.png",
+      "sha256": "5b2f45d155eefef6c15b80ace1fa28f6687ab5879b0980145d0857a7ac5d1ac2"
+    },
+    {
+      "path": "附件/05_证据与AI交互/小组原型走查反馈.md",
+      "sha256": "8be074a4aa2aa02d23aedbc6134d67672104546a634084b549561eaef7bec132"
+    },
+    {
+      "path": "附件/05_证据与AI交互/提交目录检查.json",
+      "sha256": "0daf313eedc50d7461db89079ab387447a0008e42203fd7d7257d4fc130044c2"
+    },
+    {
+      "path": "附件/05_证据与AI交互/材料检查结果.json",
+      "sha256": "48559a3c1616b39ab94b2035a24b4d30ab3b78967148851604cf54afc09cd4d8"
+    },
+    {
+      "path": "附件/06_检查工具/check_materials.py",
+      "sha256": "c1295571555db2ca0f17ac06ee286f54ed53c90d5a664991a84a77bbcad1cc5c"
+    },
+    {
+      "path": "附件/06_检查工具/使用说明.md",
+      "sha256": "c6829841812385158118bfce1c784a12089d56b55bcd5c7e99074df5c1849289"
+    },
+    {
+      "path": "附件/07_历史来源/lyl_V1.1/A-需求分析质量验证报告.md",
+      "sha256": "8e496f1bba99c63dbe6269dec914034980688c3b9755ae219857d1398343d379"
+    },
+    {
+      "path": "附件/07_历史来源/lyl_V1.1/B-AI智能体使用验证报告.md",
+      "sha256": "f731714325d1fd9fef55dcfc2ab12b6fd75d6a42c83e9b8a6961c0ef10d2031b"
+    },
+    {
+      "path": "附件/07_历史来源/lyl_V1.1/README.md",
+      "sha256": "abcdebd4c0f3fbb6b758a28e723defcc1ce7a0b1f6a976c409f318e8d25f9420"
+    },
+    {
+      "path": "附件/07_历史来源/lyl_V1.1/需求规格说明书.md",
+      "sha256": "376a3def5c54b4b2f4ff43b812be74487f8be326bc490b9fedd85d6232dfb7ae"
+    }
+  ]
+}

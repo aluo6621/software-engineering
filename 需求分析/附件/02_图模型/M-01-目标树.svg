@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="790" viewBox="0 0 1600 790" role="img" aria-labelledby="title desc"><title id="title">M-01 业务目标树</title><desc id="desc">阅读顺序：总体目标 → 五项目标 → 可观察的验收行为。V2.0 优化稿，用户规则已确认，待小组评审，非执行验证结果。</desc><defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="#60778F"/></marker></defs>
+<rect x="0" y="0" width="1600" height="790" rx="0" fill="#F6F8FC" stroke="#CED9E5"/>
+<text x="42" y="47" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="28" fill="#142D4E" font-weight="600" text-anchor="start">M-01 业务目标树</text>
+<text x="42" y="79" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">阅读顺序：总体目标 → 五项目标 → 可观察的验收行为</text>
+<path d="M42,100 L1558,100" fill="none" stroke="#CED9E5" stroke-width="1.6" stroke-linejoin="round"/>
+<rect x="430" y="125" width="740" height="90" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="446" y="154" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">G-0 让校园闲置物品流转可查找、可协商、可追溯</text>
+<text x="446" y="181" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">出售 · 免费转让 · 以物易物；线下交付，平台不处理资金</text>
+<rect x="40" y="295" width="288" height="285" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="56" y="324" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">G-1 权限与治理</text>
+<text x="56" y="351" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">G-1.1 校园身份与授权</text>
+<text x="56" y="375" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">未认证不能发布或下单</text>
+<text x="56" y="399" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">G-1.2 举报与处置</text>
+<text x="56" y="423" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">结论、理由和执行者可查</text>
+<path d="M800,215 L800,250 L184,250 L184,295" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="348" y="295" width="288" height="285" rx="12" fill="#E9F6EF" stroke="#CED9E5"/>
+<text x="364" y="324" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">G-2 发布与流转</text>
+<text x="364" y="351" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">G-2.1 发布与审核</text>
+<text x="364" y="375" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">通过后展示，驳回可修订</text>
+<text x="364" y="399" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">G-2.2 三类业务闭环</text>
+<text x="364" y="423" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">各完成一条正常场景</text>
+<path d="M800,215 L800,250 L492,250 L492,295" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="656" y="295" width="288" height="285" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="672" y="324" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">G-3 进度与记录</text>
+<text x="672" y="351" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">G-3.1 商品状态一致</text>
+<text x="672" y="375" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">下单即锁定关联物品</text>
+<text x="672" y="399" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">G-3.2 订单状态一致</text>
+<text x="672" y="423" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">重复/并发不冲突</text>
+<text x="672" y="447" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">G-3.3 交付有记录</text>
+<text x="672" y="471" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">双方各自确认后完成</text>
+<path d="M800,215 L800,250 L800,250 L800,295" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="964" y="295" width="288" height="285" rx="12" fill="#E9F6EF" stroke="#CED9E5"/>
+<text x="980" y="324" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">G-4 反馈与责任</text>
+<text x="980" y="351" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">G-4.1 交易双方可评价</text>
+<text x="980" y="375" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">仅本人参与的完成订单</text>
+<text x="980" y="399" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">G-4.2 管理处置可追溯</text>
+<text x="980" y="423" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">操作人与理由完整留痕</text>
+<path d="M800,215 L800,250 L1108,250 L1108,295" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="1272" y="295" width="288" height="285" rx="12" fill="#EAF2FF" stroke="#CED9E5"/>
+<text x="1288" y="324" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="18" fill="#142D4E" font-weight="600" text-anchor="start">G-5 统计与核对</text>
+<text x="1288" y="351" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">G-5.1 商品/订单/用户</text>
+<text x="1288" y="375" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">统一时间与统计口径</text>
+<text x="1288" y="399" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="15" fill="#53677F" font-weight="400" text-anchor="start">汇总与样例明细可核对</text>
+<path d="M800,215 L800,250 L1416,250 L1416,295" fill="none" stroke="#60778F" stroke-width="1.6" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="40" y="620" width="1520" height="100" rx="16" fill="#FFFFFF" stroke="#CED9E5"/>
+<text x="60" y="652" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="19" fill="#142D4E" font-weight="600" text-anchor="start">验证边界</text>
+<text x="60" y="678" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="14" fill="#53677F" font-weight="400" text-anchor="start">不使用无依据的认证通过率、评价率或处理时长；观察项需转化为场景并实际执行。</text>
+<text x="42" y="772" font-family="PingFang SC,Microsoft YaHei,Noto Sans CJK SC,sans-serif" font-size="13" fill="#53677F" font-weight="400" text-anchor="start">V2.0 · 分模块优化稿 · 规则已确认，业务待验证；图示不代表已实现或测试通过</text>
+</svg>

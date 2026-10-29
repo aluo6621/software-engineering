@@ -1,0 +1,212 @@
+@startuml M-07-领域类图
+!theme plain
+skinparam defaultFontName "PingFang SC"
+skinparam classAttributeIconSize 0
+skinparam wrapWidth 200
+title M-07 领域类图（V2.0）\n对应第 3 章、DC-01～09；业务概念模型，不指定数据库实现
+package "账号与认证" {
+class "User\n用户" as User {
+  userId
+  username
+  passwordHash（不返回）
+  displayName
+  phone / email（受限）
+  role
+  accountStatus
+  restrictionUntil
+  createdAt
+}
+class "CampusCertification\n认证申请版本" as CampusCertification {
+  certId
+  userId
+  submissionVersion
+    realName / studentNo（私有）
+  status
+  submittedAt
+  reviewedBy / reviewedAt
+  verificationMethod（线下核验说明）
+  reviewReason
+}
+}
+package "商品" {
+class "Category\n分类" as Category {
+  categoryId
+  name
+  单级分类，无父分类
+}
+class "Product\n商品" as Product {
+  productId
+  ownerId
+  categoryId
+  title / description / conditionLevel
+  tradeType
+  price（出售正数、赠送0、交换空）
+  exchangeExpectation
+  status
+  contentVersion
+  createdAt / updatedAt
+}
+class "ProductImage\n商品图片" as ProductImage {
+  imageId
+  productId
+  assetRef
+  sortOrder
+}
+}
+package "订单与履约" {
+class "Order\n订单" as Order {
+  orderId
+  buyerId / sellerId
+  tradeType
+  agreedAmount / currency
+  topUpAmount / topUpPayerId / topUpPayeeId
+  lifecycleStatus
+  handlingStatus（正常 / 暂停）
+  confirmationDeadline
+  cancelRequestId / cancelRequestedBy / cancelReason
+  cancelRequestedAt / cancelRequestStatus
+  cancelRespondedBy / cancelRespondedAt
+  createdAt / acceptedAt / completedAt / endedAt
+  endReasonCode / detail
+  creationRequestKey
+}
+class "OrderItem\n订单物品项与快照" as OrderItem {
+  itemId
+  orderId / productId（仅目标项必填）
+  itemRole（目标 / 交换提供）
+  fromUserId / toUserId
+  productContentVersion（提供项为空）
+  title / description / category / condition 快照
+  imageRefs / tradeType / price 快照
+  exchangeExpectation 快照
+}
+class "DeliveryRecord\n交付记录" as DeliveryRecord {
+  deliveryId
+  orderId
+  recordedBy
+  occurredAt / recordedAt
+  location
+  itemHandoverNotes（逐物品项说明）
+}
+class "DeliveryConfirmation\n本人确认" as DeliveryConfirmation {
+  confirmationId
+  orderId
+  userId
+  confirmedAt
+}
+class "OrderEvent\n订单事件" as OrderEvent {
+  eventId
+  orderId
+  actionType
+  actorId / actorType
+  occurredAt
+  requestKey
+  before / afterLifecycle
+  before / afterHandling
+  reason
+  adminActionId（可选）
+  deadlineBefore / deadlineAfter
+}
+}
+package "反馈与治理" {
+class "Notification\n站内通知" as Notification {
+ notificationId / recipientId / eventKey
+ type / subjectRef / content
+ createdAt / readAt
+}
+
+class "Review\n评价" as Review {
+  reviewId
+  orderId
+  reviewerId / revieweeId
+  rating / content
+  replyContent / repliedBy / repliedAt
+  createdAt
+}
+class "Report\n举报" as Report {
+  reportId
+  reporterId
+  targetType / targetId
+  relatedOrderId（可选）
+  reason / evidenceRefs
+  submittedAt / status
+  handledBy / handledAt
+  result / reason
+  groupRef（可选，非访问授权）
+}
+class "Favorite\n收藏" as Favorite {
+  favoriteId
+  userId / productId
+  createdAt
+}
+class "Consultation\n咨询" as Consultation {
+  consultId
+  productId / askerId
+  content / createdAt
+  reply / repliedAt / repliedBy
+}
+class "AdminAction\n管理员操作记录" as AdminAction {
+  actionId
+  adminId
+  actionType
+  targetType / targetId
+  relatedRefs
+  occurredAt
+  reason / evidenceRefs
+  before / afterSummary
+}
+}
+User "1" -- "0..*" Notification : 本人通知
+User "1" -- "0..*" CampusCertification : 提交版本
+User "1" -- "0..*" Product : 发布
+Category "1" -- "0..*" Product : 分类
+Product "1" -- "0..*" ProductImage : 当前图片
+User "1" -- "0..*" Order : 买家
+User "1" -- "0..*" Order : 卖家
+Order "1" *-- "1..2" OrderItem : 约定物品
+Product "0..1" -- "0..*" OrderItem : 历史参与
+User "1" -- "0..*" OrderItem : 交出方
+User "1" -- "0..*" OrderItem : 接收方
+Order "1" *-- "0..1" DeliveryRecord : 有效交付记录
+Order "1" *-- "0..2" DeliveryConfirmation : 本人确认
+User "1" -- "0..*" DeliveryConfirmation : 确认者
+Order "1" *-- "1..*" OrderEvent : 追加历史
+AdminAction "0..1" -- "0..*" OrderEvent : 处置依据
+Order "1" -- "0..2" Review : 完成后评价
+User "1" -- "0..*" Review : 评价人
+User "1" -- "0..*" Review : 被评价人
+User "1" -- "0..*" Report : 举报人
+Order "0..1" -- "0..*" Report : 可选交易背景
+User "1" -- "0..*" Favorite : 本人收藏
+Product "1" -- "0..*" Favorite : 被收藏
+Product "1" -- "0..*" Consultation : 被咨询
+User "1" -- "0..*" Consultation : 提问者
+User "1" -- "0..*" AdminAction : 管理员执行
+note bottom of Order
+取消申请不改变生命周期，另一方同意后ST-O06。
+待回应禁止交付登记，拒绝后继续；暂停时禁止申请或回应。
+同单最多一份待回应申请，历史追加OrderEvent。
+end note
+note bottom of OrderItem
+出售/赠送恰好1个目标项；交换恰好2项，方向相反。
+已发布目标商品最多属于1笔进行中订单（含暂停）。
+提供项productId为空，直接填写资料，不创建或锁定商品。
+订单卖家拥有目标物品，交换买家声明有权提供本人实物（真实性待双方核实）。
+快照创建后不可覆盖；历史图片版本保留。
+end note
+note bottom of DeliveryConfirmation
+确认人必须为订单参与者，同单同人至多1条。
+交付记录不代替确认；双方确认才共同完成。
+确认和事件保存服务端时间，不由客户端改写。
+end note
+note bottom of CampusCertification
+一用户可有历史版本，同时至多1条待审核。
+一个学号对应一个有效账号（UD-08），仅提交姓名和学号。
+审核记录留存，普通资料接口不得改变认证结论。
+end note
+note bottom of AdminAction
+管理操作与敏感读取留痕，异常决定与订单事件关联。
+不复制无关隐私；保留期限按正文2.6及UQ-10执行。
+组合关系表示业务归属，不授权级联物理删除证据。
+end note
+@enduml

@@ -1,0 +1,41 @@
+{
+  "scope": "Node VM with minimal DOM stubs; not browser or human PV",
+  "checks": [
+    {
+      "name": "正常出售与双确认",
+      "result": "pass"
+    },
+    {
+      "name": "未认证下单拒绝",
+      "result": "pass"
+    },
+    {
+      "name": "协商取消与自同意拒绝",
+      "result": "pass"
+    },
+    {
+      "name": "取消拒绝后继续履约",
+      "result": "pass"
+    },
+    {
+      "name": "截止禁止接单与扫描",
+      "result": "pass"
+    },
+    {
+      "name": "暂停恢复与终止",
+      "result": "pass"
+    },
+    {
+      "name": "姓名学号申请与审核",
+      "result": "pass"
+    },
+    {
+      "name": "撤回申请与权限",
+      "result": "pass"
+    },
+    {
+      "name": "所有页面与各角色可生成HTML",
+      "result": "pass"
+    }
+  ]
+}

@@ -21,11 +21,18 @@ export function createApp({database='data/campus.sqlite',adminPassword,clock=Dat
  const quota=u=>db.prepare("SELECT COUNT(*) n FROM products WHERE owner_id=? AND status IN ('pending','live')").get(u).n;
  const release=p=>{const product=db.prepare('SELECT * FROM products WHERE id=?').get(p);const owner=db.prepare('SELECT * FROM users WHERE id=?').get(product.owner_id);db.prepare('UPDATE products SET status=? WHERE id=?').run(owner.certified&&quota(owner.id)<20?'live':'off',p)};
  function expire(){tx(()=>{for(const o of db.prepare("SELECT * FROM orders WHERE status='pending' AND paused=0 AND deadline<=?").all(now())){db.prepare("UPDATE orders SET status='closed' WHERE id=?").run(o.id);release(o.product_id);event(o.id,null,'timeout');notice(o.buyer_id,'订单超时关闭');notice(o.seller_id,'订单超时关闭');}})}
- async function body(req){let chunks=[],size=0;for await(const chunk of req){size+=chunk.length;if(size>44*1024*1024)fail(413,'请求内容过大');chunks.push(chunk)}try{return JSON.parse(Buffer.concat(chunks).toString()||'{}')}catch{fail(400,'JSON格式错误')}}
- const session=req=>{const cookie=(req.headers.cookie||'').split(';').map(x=>x.trim()).find(x=>x.startsWith('campus_session='));if(!cookie)return null;return db.prepare('SELECT s.csrf,s.token_hash,u.id,u.username,u.role,u.certified FROM sessions s JOIN users u ON u.id=s.user_id WHERE s.token_hash=? AND s.expires_at>?').get(hash(cookie.slice(15)),now())};
+ async function body(req){
+  const chunks=[];let size=0;
+  for await(const chunk of req){size+=chunk.length;if(size>44*1024*1024)fail(413,'请求内容过大');chunks.push(chunk);}
+  let data;
+  try{data=JSON.parse(Buffer.concat(chunks).toString()||'{}');}catch{fail(400,'JSON格式错误');}
+  if(data===null||typeof data!=='object'||Array.isArray(data))fail(400,'请求内容必须为JSON对象');
+  return data;
+ }
+ const session=req=>{const cookie=(req.headers.cookie||'').split(';').map(x=>x.trim()).find(x=>x.startsWith('campus_session='));if(!cookie)return null;return db.prepare('SELECT s.csrf,s.token_hash,u.id,u.username,u.role,u.certified,u.avatar FROM sessions s JOIN users u ON u.id=s.user_id WHERE s.token_hash=? AND s.expires_at>?').get(hash(cookie.slice(15)),now())};
  function auth(req,role){const u=session(req);if(!u)fail(401,'请先登录');if(role==='admin'&&u.role!=='admin')fail(403,'需要管理员权限');if(role==='student'&&(u.role!=='student'||!u.certified))fail(403,'需要已认证学生身份');if(!['GET','HEAD'].includes(req.method)&&req.headers['x-csrf-token']!==u.csrf)fail(403,'请求校验失败，请刷新登录');return u}
  const publicProduct=p=>({...p,images:db.prepare('SELECT id FROM product_images WHERE product_id=?').all(p.id).map(x=>`/api/images/${x.id}`)});
- const safeUser=u=>({id:u.id,username:u.username,role:u.role,certified:!!u.certified});
+ const safeUser=u=>({id:u.id,username:u.username,role:u.role,certified:!!u.certified,avatarVersion:u.avatar?hash(u.avatar).slice(0,16):null});
  const server=createServer(async(req,res)=>{const send=(status,data,headers={})=>{res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store',...headers});res.end(JSON.stringify(data))};try{
   const url=new URL(req.url,'http://localhost');const path=url.pathname;const method=req.method;
   res.setHeader('X-Content-Type-Options','nosniff');res.setHeader('Referrer-Policy','same-origin');res.setHeader('Content-Security-Policy',"default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'none'; frame-ancestors 'none'");
@@ -33,11 +40,122 @@ export function createApp({database='data/campus.sqlite',adminPassword,clock=Dat
   if(path==='/api/register'&&method==='POST'){const b=await body(req);const username=text(b.username,4,20);if(!/^[A-Za-z0-9_]+$/.test(username))fail(400,'用户名仅限字母数字下划线');const p=text(b.password,8,128);if(!/[A-Za-z]/.test(p)||!/[0-9]/.test(p))fail(400,'密码须包含字母和数字');try{const r=db.prepare('INSERT INTO users(username,password_hash,created_at) VALUES(?,?,?)').run(username,passwordHash(p),now());return send(201,{id:Number(r.lastInsertRowid)})}catch(e){if(e.code?.includes('SQLITE'))fail(409,'用户名已存在');throw e}}
   if(path==='/api/login'&&method==='POST'){const b=await body(req);const name=text(b.username,1,20),p=text(b.password,1,128);const u=db.prepare('SELECT * FROM users WHERE username=?').get(name);if(u?.locked_until>now())fail(429,'登录失败次数过多，账号锁定30分钟');if(!u||!verify(p,u.password_hash)){if(u)db.prepare('UPDATE users SET failed_attempts=failed_attempts+1,locked_until=? WHERE id=?').run(u.failed_attempts+1>=5?now()+1800000:0,u.id);fail(401,'用户名或密码错误')}db.prepare('UPDATE users SET failed_attempts=0,locked_until=0 WHERE id=?').run(u.id);const token=randomBytes(32).toString('hex'),csrf=randomBytes(24).toString('hex');db.prepare('INSERT INTO sessions VALUES(?,?,?,?)').run(hash(token),u.id,csrf,now()+86400000);return send(200,{user:safeUser(u),csrf},{'Set-Cookie':`campus_session=${token}; HttpOnly; SameSite=Strict; Path=/; Max-Age=86400${process.env.COOKIE_SECURE==='1'?'; Secure':''}`})}
   if(path==='/api/me'&&method==='GET'){const u=session(req);return send(200,u?{user:safeUser(u),csrf:u.csrf}:{user:null})}
+  if(path==='/api/conversations'){
+   if(method==='GET'){
+    const u=auth(req);
+    const rows=db.prepare(`SELECT c.*,p.title product_title,
+      CASE WHEN c.buyer_id=? THEN COALESCE(NULLIF(s.nickname,''),s.username) ELSE COALESCE(NULLIF(b.nickname,''),b.username) END peer_name,
+      CASE WHEN c.buyer_id=? THEN s.id ELSE b.id END peer_id,
+      CASE WHEN c.buyer_id=? THEN s.avatar ELSE b.avatar END peer_avatar,
+      (SELECT content FROM messages WHERE conversation_id=c.id ORDER BY id DESC LIMIT 1) last_message,
+      COALESCE((SELECT MAX(created_at) FROM messages WHERE conversation_id=c.id),c.created_at) updated_at,
+      (SELECT COUNT(*) FROM messages WHERE conversation_id=c.id AND sender_id<>? AND read_at IS NULL) unread
+      FROM conversations c JOIN products p ON p.id=c.product_id JOIN users b ON b.id=c.buyer_id JOIN users s ON s.id=c.seller_id
+      WHERE c.buyer_id=? OR c.seller_id=? ORDER BY updated_at DESC,c.id DESC`).all(u.id,u.id,u.id,u.id,u.id,u.id);
+    return send(200,rows.map(({peer_avatar,...c})=>({...c,peer_avatar_version:peer_avatar?hash(peer_avatar).slice(0,16):null})));
+   }
+   if(method==='POST'){
+    const u=auth(req,'student'),b=await body(req);if(!b||typeof b!=='object')fail(400,'请选择商品或订单');
+    let product,buyer,seller;
+    if(b.orderId!==undefined){
+     const o=db.prepare('SELECT * FROM orders WHERE id=?').get(Number(b.orderId));
+     if(!o||![o.buyer_id,o.seller_id].includes(u.id))fail(403,'不是订单参与者');
+     product=o.product_id;buyer=o.buyer_id;seller=o.seller_id;
+    }else{
+     const p=db.prepare('SELECT * FROM products WHERE id=?').get(Number(b.productId));
+     if(!p||p.status!=='live')fail(404,'商品不存在或暂不可咨询');
+     if(p.owner_id===u.id)fail(400,'不能给自己发送私信');
+     product=p.id;buyer=u.id;seller=p.owner_id;
+    }
+    const peer=db.prepare('SELECT role,certified FROM users WHERE id=?').get(u.id===buyer?seller:buyer);
+    if(!peer||peer.role!=='student'||!peer.certified)fail(403,'对方暂不可接收私信');
+    db.prepare('INSERT OR IGNORE INTO conversations(product_id,buyer_id,seller_id,created_at) VALUES(?,?,?,?)').run(product,buyer,seller,now());
+    return send(200,{id:db.prepare('SELECT id FROM conversations WHERE product_id=? AND buyer_id=? AND seller_id=?').get(product,buyer,seller).id});
+   }
+   fail(405,'不支持的请求');
+  }
+  const chatMatch=path.match(/^\/api\/conversations\/(\d+)(?:\/(messages|read))?$/);
+  if(chatMatch){
+   const u=auth(req),id=Number(chatMatch[1]),action=chatMatch[2];
+   const c=db.prepare('SELECT * FROM conversations WHERE id=?').get(id);
+   if(!c||![c.buyer_id,c.seller_id].includes(u.id))fail(404,'会话不存在或无权查看');
+   if(!action&&method==='GET'){
+    const peer=db.prepare('SELECT id,username,nickname,avatar FROM users WHERE id=?').get(u.id===c.buyer_id?c.seller_id:c.buyer_id);
+    const before=url.searchParams.get('before');const boundary=before===null?Number.MAX_SAFE_INTEGER:Number(before);
+    if(!Number.isSafeInteger(boundary)||boundary<1)fail(400,'消息分页参数不合法');
+    const rows=db.prepare('SELECT id,sender_id,content,created_at,read_at FROM messages WHERE conversation_id=? AND id<? ORDER BY id DESC LIMIT 101').all(id,boundary);
+    return send(200,{id,product_id:c.product_id,product_title:db.prepare('SELECT title FROM products WHERE id=?').get(c.product_id).title,peer_id:peer.id,peer_username:peer.username,peer_name:peer.nickname||peer.username,peer_avatar_version:peer.avatar?hash(peer.avatar).slice(0,16):null,messages:rows.slice(0,100).reverse(),hasMore:rows.length>100});
+   }
+   if(action==='messages'&&method==='POST'){
+    auth(req,'student');
+    const b=await body(req);if(!b)fail(400,'消息不能为空');
+    const content=text(b.content,1,2000),key=text(b.requestKey,8,100);
+    const old=db.prepare('SELECT * FROM messages WHERE sender_id=? AND request_key=?').get(u.id,key);
+    if(old){if(old.conversation_id!==id||old.content!==content)fail(409,'请求标识已用于其他消息');return send(200,{id:old.id});}
+    const r=db.prepare('INSERT INTO messages(conversation_id,sender_id,content,request_key,created_at) VALUES(?,?,?,?,?)').run(id,u.id,content,key,now());
+    return send(201,{id:Number(r.lastInsertRowid)});
+   }
+   if(action==='read'&&method==='POST'){
+    const b=await body(req),through=Number(b?.throughId);
+    if(!Number.isSafeInteger(through)||through<0)fail(400,'已读消息编号不合法');
+    db.prepare('UPDATE messages SET read_at=? WHERE conversation_id=? AND sender_id<>? AND id<=? AND read_at IS NULL').run(now(),id,u.id,through);
+    return send(200,{ok:true});
+   }
+   fail(405,'不支持的请求');
+  }
+  const publicUserMatch=path.match(/^\/api\/users\/(\d+)(\/avatar)?$/);
+  if(publicUserMatch){
+   auth(req);if(method!=='GET')fail(405,'不支持的请求');
+   const p=db.prepare("SELECT id,username,nickname,bio,certified,avatar FROM users WHERE id=? AND role='student'").get(Number(publicUserMatch[1]));
+   if(!p)fail(404,'用户不存在');
+   if(publicUserMatch[2]){
+    if(!p.avatar)fail(404,'尚未设置头像');
+    const [prefix,data]=p.avatar.split(',');res.writeHead(200,{'Content-Type':prefix.includes('png')?'image/png':'image/jpeg','Cache-Control':'private, no-store'});return res.end(Buffer.from(data,'base64'));
+   }
+   const profile={id:p.id,username:p.username,nickname:p.nickname,bio:p.bio,certified:!!p.certified,avatarVersion:p.avatar?hash(p.avatar).slice(0,16):null};
+   return send(200,{profile,products:db.prepare("SELECT p.*,u.username owner_name FROM products p JOIN users u ON u.id=p.owner_id WHERE p.owner_id=? AND p.status='live' ORDER BY p.id DESC").all(p.id).map(publicProduct)});
+  }
+  if(path==='/api/profile/avatar'){
+   const u=auth(req);
+   if(method==='GET'){
+    if(!u.avatar)fail(404,'尚未设置头像');
+    const [prefix,data]=u.avatar.split(',');
+    res.writeHead(200,{'Content-Type':prefix.includes('png')?'image/png':'image/jpeg','Cache-Control':'private, no-store'});
+    return res.end(Buffer.from(data,'base64'));
+   }
+   if(method==='PUT'){
+    const b=await body(req);
+    if(!b||typeof b.avatar!=='string')fail(400,'请上传PNG或JPEG头像');
+    const avatar=b.avatar;
+    if(avatar.length>2800000)fail(400,'头像图片不能超过2 MiB');
+    if(avatar){images([avatar]);if(Buffer.from(avatar.split(',')[1],'base64').length>2097152)fail(400,'头像图片不能超过2 MiB');}
+    db.prepare('UPDATE users SET avatar=? WHERE id=?').run(avatar,u.id);
+    return send(200,{ok:true});
+   }
+   fail(405,'不支持的请求');
+  }
+  if(path==='/api/profile'){
+   const u=auth(req);
+   if(method==='GET')return send(200,db.prepare('SELECT username,role,certified,nickname,bio FROM users WHERE id=?').get(u.id));
+   if(method==='PUT'){
+    const b=await body(req);
+    if(!b||Array.isArray(b)||typeof b!=='object'||Object.keys(b).some(k=>!['nickname','bio','avatar'].includes(k)))fail(400,'仅可修改昵称、个人简介和头像');
+    const nickname=text(b.nickname,0,40),bio=text(b.bio,0,300);
+    if(Object.hasOwn(b,'avatar')){
+     if(typeof b.avatar!=='string')fail(400,'请上传PNG或JPEG头像');
+     if(b.avatar.length>2800000)fail(400,'头像图片不能超过2 MiB');
+     if(b.avatar){images([b.avatar]);if(Buffer.from(b.avatar.split(',')[1],'base64').length>2097152)fail(400,'头像图片不能超过2 MiB');}
+     db.prepare('UPDATE users SET nickname=?,bio=?,avatar=? WHERE id=?').run(nickname,bio,b.avatar,u.id);
+    }else db.prepare('UPDATE users SET nickname=?,bio=? WHERE id=?').run(nickname,bio,u.id);
+    return send(200,{ok:true});
+   }
+   fail(405,'不支持的请求');
+  }
   if(path==='/api/logout'&&method==='POST'){const u=auth(req);db.prepare('DELETE FROM sessions WHERE token_hash=?').run(u.token_hash);return send(200,{ok:true},{'Set-Cookie':'campus_session=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0'})}
-  if(path==='/api/certifications'){const u=auth(req);if(method==='GET')return send(200,db.prepare('SELECT id,real_name,student_no,status,reason,created_at FROM certifications WHERE user_id=? ORDER BY id DESC').all(u.id));if(method==='POST'){if(u.role!=='student'||u.certified)fail(403,'当前账号不可申请');const b=await body(req);try{const r=db.prepare('INSERT INTO certifications(user_id,real_name,student_no,created_at) VALUES(?,?,?,?)').run(u.id,text(b.realName,1,40),text(b.studentNo,1,40),now());return send(201,{id:Number(r.lastInsertRowid)})}catch{fail(409,'已有待审核申请')}}}
+  if(path==='/api/certifications'){const u=auth(req);if(method==='GET')return send(200,db.prepare('SELECT id,real_name,student_no,status,reason,created_at FROM certifications WHERE user_id=? ORDER BY id DESC').all(u.id));if(method==='POST'){if(u.role!=='student'||u.certified)fail(403,'当前账号不可申请');const b=await body(req);const realName=text(b.realName,1,40),studentNo=text(b.studentNo,1,40);if(db.prepare("SELECT id FROM certifications WHERE student_no=? AND status='approved'").get(studentNo))fail(409,'该学号已完成认证，无法重复申请');try{const r=db.prepare('INSERT INTO certifications(user_id,real_name,student_no,created_at) VALUES(?,?,?,?)').run(u.id,realName,studentNo,now());return send(201,{id:Number(r.lastInsertRowid)})}catch{fail(409,'已有待审核申请')}}}
   if(path==='/api/products'&&method==='GET'){const q=url.searchParams.get('q')||'';return send(200,db.prepare("SELECT p.*,u.username owner_name FROM products p JOIN users u ON u.id=p.owner_id WHERE p.status='live' AND p.title LIKE ? ORDER BY p.id DESC").all('%'+q+'%').map(publicProduct))}
   if(path==='/api/products/mine'&&method==='GET'){const u=auth(req);return send(200,db.prepare('SELECT * FROM products WHERE owner_id=? ORDER BY id DESC').all(u.id).map(publicProduct))}
-  if(path==='/api/products'&&method==='POST'){const u=auth(req,'student'),b=await body(req);const type=b.tradeType;if(!['sale','gift','exchange'].includes(type))fail(400,'交易方式错误');const price=type==='exchange'?null:type==='gift'?0:amount(b.price);if(type==='sale'&&price<=0)fail(400,'出售价格须大于0');const expectation=type==='exchange'?text(b.expectation):'';const imgs=images(b.images);const data=[u.id,text(b.title,1,80),text(b.category,1,40),text(b.condition,1,40),text(b.description),type,price,expectation,now()];const id=tx(()=>{if(quota(u.id)>=20)fail(409,'待审核及在售最多20件');const r=db.prepare('INSERT INTO products(owner_id,title,category,condition_text,description,trade_type,price,expectation,created_at) VALUES(?,?,?,?,?,?,?,?,?)').run(...data);const id=Number(r.lastInsertRowid);for(const img of imgs)db.prepare('INSERT INTO product_images(product_id,data_url) VALUES(?,?)').run(id,img);return id});return send(201,{id,status:'pending'})}
+  if(path==='/api/products'&&method==='POST'){const u=auth(req,'student'),b=await body(req);const type=b.tradeType;if(!['sale','gift','exchange'].includes(type))fail(400,'交易方式错误');const price=type==='exchange'?null:type==='gift'?0:amount(b.price);if(type==='sale'&&price<=0)fail(400,'出售价格须大于0');const expectation=type==='exchange'?text(b.expectation):'';const imgs=images(b.images);const data=[u.id,text(b.title,1,80),text(b.category,1,40),text(b.condition,1,40),text(b.description),type,price,expectation,text(b.deliveryLocation,1,200),now()];const id=tx(()=>{if(quota(u.id)>=20)fail(409,'待审核及在售最多20件');const r=db.prepare('INSERT INTO products(owner_id,title,category,condition_text,description,trade_type,price,expectation,delivery_location,created_at) VALUES(?,?,?,?,?,?,?,?,?,?)').run(...data);const id=Number(r.lastInsertRowid);for(const img of imgs)db.prepare('INSERT INTO product_images(product_id,data_url) VALUES(?,?)').run(id,img);return id});return send(201,{id,status:'pending'})}
   let m=path.match(/^\/api\/products\/(\d+)$/);if(m&&method==='GET'){const p=db.prepare('SELECT p.*,u.username owner_name FROM products p JOIN users u ON u.id=p.owner_id WHERE p.id=?').get(+m[1]);if(!p)fail(404,'商品不存在');const u=session(req);const participant=u&&db.prepare('SELECT id FROM orders WHERE product_id=? AND (buyer_id=? OR seller_id=?)').get(p.id,u.id,u.id);if(p.status!=='live'&&u?.id!==p.owner_id&&u?.role!=='admin'&&!participant)fail(404,'商品不存在或不可见');return send(200,publicProduct(p))}
   m=path.match(/^\/api\/images\/(\d+)$/);if(m&&method==='GET'){const img=db.prepare('SELECT i.*,p.status,p.owner_id FROM product_images i JOIN products p ON p.id=i.product_id WHERE i.id=?').get(+m[1]);if(!img)fail(404,'图片不存在');const u=session(req);if(img.status!=='live'&&u?.id!==img.owner_id&&u?.role!=='admin'&&!(u&&db.prepare('SELECT id FROM orders WHERE product_id=? AND (buyer_id=? OR seller_id=?)').get(img.product_id,u.id,u.id)))fail(404,'图片不可见');const [prefix,data]=img.data_url.split(',');res.writeHead(200,{'Content-Type':prefix.includes('png')?'image/png':'image/jpeg','Cache-Control':'private, no-store'});return res.end(Buffer.from(data,'base64'))}
   if(path==='/api/admin/queue'&&method==='GET'){auth(req,'admin');return send(200,{certifications:db.prepare("SELECT c.*,u.username FROM certifications c JOIN users u ON u.id=c.user_id WHERE c.status='pending'").all(),products:db.prepare("SELECT * FROM products WHERE status='pending'").all().map(publicProduct)})}

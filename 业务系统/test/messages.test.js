@@ -1,0 +1,70 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createApp} from '../src/app.js';
+
+test('私信双方可见、认证权限、未读、幂等与历史分页',async t=>{
+ const app=createApp({database:':memory:',adminPassword:'AdminPassword123!'});
+ await new Promise(r=>app.server.listen(0,'127.0.0.1',r));
+ t.after(()=>new Promise(r=>app.server.close(r)));
+ const base='http://127.0.0.1:'+app.server.address().port;
+ const client=()=>({cookie:'',csrf:''});
+ async function req(c,path,method='GET',body,status=200){
+  const r=await fetch(base+'/api'+path,{method,headers:{cookie:c.cookie,'x-csrf-token':c.csrf,'content-type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)});
+  if(r.headers.get('set-cookie'))c.cookie=r.headers.get('set-cookie').split(';')[0];
+  const data=await r.json();assert.equal(r.status,status,JSON.stringify(data));if(data.csrf)c.csrf=data.csrf;return data;
+ }
+ const seller=client(),buyer=client(),third=client(),uncertified=client(),admin=client();
+ for(const [username,c,certified] of [['seller',seller,1],['buyer',buyer,1],['third',third,1],['newuser',uncertified,0]]){
+  const u=await req(c,'/register','POST',{username,password:'Password123'},201);
+  app.db.prepare('UPDATE users SET certified=? WHERE id=?').run(certified,u.id);c.id=u.id;
+  await req(c,'/login','POST',{username,password:'Password123'});
+ }
+ await req(admin,'/login','POST',{username:'admin',password:'AdminPassword123!'});
+ const p=Number(app.db.prepare("INSERT INTO products(owner_id,title,category,condition_text,description,trade_type,price,status,created_at) VALUES(?,'台灯','日用','九成新','测试','sale',1000,'live',?)").run(seller.id,Date.now()).lastInsertRowid);
+ await req(client(),'/conversations','GET',undefined,401);
+ await req(uncertified,'/conversations','POST',{productId:p},403);
+ await req(admin,'/conversations','POST',{productId:p},403);
+ await req(seller,'/conversations','POST',{productId:p},400);
+ const chat=await req(buyer,'/conversations','POST',{productId:p});
+ assert.equal((await req(buyer,'/conversations','POST',{productId:p})).id,chat.id);
+ const png='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=';
+ await req(buyer,'/profile','PUT',{nickname:'买家同学',bio:'喜欢校园流转',avatar:png});
+ const peerChat=await req(seller,'/conversations/'+chat.id);assert.equal(peerChat.peer_id,buyer.id);assert.equal(peerChat.peer_name,'买家同学');assert.ok(peerChat.peer_avatar_version);
+ const publicProfile=await req(seller,'/users/'+buyer.id);assert.equal(publicProfile.profile.bio,'喜欢校园流转');
+ assert.deepEqual(Object.keys(publicProfile.profile).sort(),['id','username','nickname','bio','certified','avatarVersion'].sort());
+ assert.equal((await req(buyer,'/users/'+seller.id)).products.length,1);
+ await req(client(),'/users/'+buyer.id,'GET',undefined,401);await req(seller,'/users/1','GET',undefined,404);
+ const avatar=await fetch(base+'/api/users/'+buyer.id+'/avatar',{headers:{cookie:seller.cookie}});assert.equal(avatar.status,200);assert.equal(avatar.headers.get('content-type'),'image/png');
+ const inboxPeer=(await req(seller,'/conversations'))[0];assert.equal(inboxPeer.peer_id,buyer.id);assert.ok(inboxPeer.peer_avatar_version);assert.ok(!Object.hasOwn(inboxPeer,'peer_avatar'));
+ assert.equal((await req(seller,'/conversations'))[0].peer_name,'买家同学');
+ assert.equal((await req(third,'/conversations')).length,0);
+ for(const suffix of ['', '/messages','/read'])await req(third,'/conversations/'+chat.id+suffix,suffix?'POST':'GET',suffix?{content:'窥探',requestKey:'bad-request',throughId:999}:undefined,404);
+ await req(admin,'/conversations/'+chat.id,'GET',undefined,404);
+ const bad=client();bad.cookie=buyer.cookie;
+ await req(bad,'/conversations/'+chat.id+'/messages','POST',{content:'无令牌',requestKey:'csrf-test'},403);
+ await req(buyer,'/conversations/'+chat.id+'/messages','POST',{content:'   ',requestKey:'empty-test'},400);
+ const first=await req(buyer,'/conversations/'+chat.id+'/messages','POST',{content:'台灯还在吗？',requestKey:'message-001',sender_id:seller.id},201);
+ assert.equal((await req(buyer,'/conversations/'+chat.id+'/messages','POST',{content:'台灯还在吗？',requestKey:'message-001'})).id,first.id);
+ await req(buyer,'/conversations/'+chat.id+'/messages','POST',{content:'不同内容',requestKey:'message-001'},409);
+ assert.equal((await req(seller,'/conversations'))[0].unread,1);
+ let data=await req(seller,'/conversations/'+chat.id);assert.equal(data.messages[0].sender_id,buyer.id);
+ assert.equal((await req(seller,'/conversations'))[0].unread,1,'GET不改变已读');
+ await req(seller,'/conversations/'+chat.id+'/read','POST',{throughId:first.id});
+ assert.equal((await req(seller,'/conversations'))[0].unread,0);
+ const second=await req(buyer,'/conversations/'+chat.id+'/messages','POST',{content:'可以图书馆交付吗？',requestKey:'message-002'},201);
+ await req(seller,'/conversations/'+chat.id+'/read','POST',{throughId:first.id});
+ assert.equal((await req(seller,'/conversations'))[0].unread,1,'较晚到达消息不会误标已读');
+ await req(seller,'/conversations/'+chat.id+'/messages','POST',{content:'可以，明天下午见。',requestKey:'reply-001'},201);
+ assert.equal((await req(buyer,'/conversations'))[0].unread,1);
+ assert.ok((await req(buyer,'/conversations/'+chat.id)).messages[0].read_at);
+ const order=await req(buyer,'/orders','POST',{productId:p,requestKey:'order-chat-001'},201);
+ assert.equal((await req(seller,'/conversations','POST',{orderId:order.id})).id,chat.id);
+ assert.equal((await req(buyer,'/users/'+seller.id)).products.length,0,'已预订商品不在公开主页展示');
+ await req(third,'/conversations','POST',{orderId:order.id},403);
+ for(let i=0;i<110;i++)app.db.prepare('INSERT INTO messages(conversation_id,sender_id,content,request_key,created_at) VALUES(?,?,?,?,?)').run(chat.id,buyer.id,'历史消息'+i,'history-'+i,Date.now());
+ data=await req(seller,'/conversations/'+chat.id);assert.equal(data.messages.length,100);assert.ok(data.hasMore);
+ const older=await req(seller,'/conversations/'+chat.id+'?before='+data.messages[0].id);
+ assert.ok(older.messages.length>0);assert.ok(older.messages.at(-1).id<data.messages[0].id);
+ await req(seller,'/conversations/'+chat.id+'?before=invalid','GET',undefined,400);
+ assert.ok(second.id>first.id);
+});
